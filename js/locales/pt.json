@@ -1,0 +1,52 @@
+{
+  "app": {
+    "title": "Teste de Compatibilidade Valentine - Qual é Nossa Compatibilidade %? 💕",
+    "description": "Encontre sua compatibilidade com nome + aniversário + 5 questões! Analise compatibilidade de nome, signos do zodíaco e tipos de amor. Salve e compartilhe resultados."
+  },
+  "intro": {
+    "title": "Teste de Compatibilidade\nValentine",
+    "subtitle": "Qual é Nossa Compatibilidade %?",
+    "description": "Descubra sua compatibilidade destinada\ncom nome + aniversário + 5 questões",
+    "meta1": "💕 Compatibilidade de Nome",
+    "meta2": "⭐ Compatibilidade de Zodíaco",
+    "meta3": "💌 Tipo de Amor",
+    "button": "Começar Teste"
+  },
+  "input": {
+    "myInfo": "💕 Minhas Informações",
+    "partnerInfo": "💗 Informações do Parceiro",
+    "name": "Nome",
+    "namePlaceholder": "Insira o nome",
+    "month": "Aniversário (Mês)",
+    "monthPlaceholder": "Mês",
+    "day": "Aniversário (Dia)",
+    "dayPlaceholder": "Dia",
+    "button": "Próximo →"
+  },
+  "question": {
+    "myAnswer": "💕 Minha Resposta",
+    "partnerAnswer": "💗 Resposta do Parceiro"
+  },
+  "loading": {
+    "text": "Analisando compatibilidade..."
+  },
+  "result": {
+    "compatibilityScore": "Compatibilidade",
+    "deepAnalysis": "Ver Análise Profunda de Compatibilidade com IA",
+    "shareButton": "📤 Compartilhar Resultado",
+    "saveImageButton": "📷 Salvar Imagem",
+    "retryButton": "🔄 Tentar Novamente",
+    "analysisTitle": "📊 Análise de Compatibilidade Detalhada",
+    "nameCompatibility": "💕 Compatibilidade de Nome",
+    "zodiacCompatibility": "⭐ Compatibilidade de Zodíaco",
+    "typeCompatibility": "💌 Compatibilidade de Tipo",
+    "loveTypes": "💘 Tipos de Amor",
+    "tips": "💡 Dicas de Relacionamento"
+  },
+  "premium": {
+    "deepAnalysis": "🔮 Análise Profunda de Compatibilidade com IA",
+    "zodiacAnalysis": "⭐ Análise Profunda de Zodíaco",
+    "coupleAdvice": "💌 Conselho para Casais",
+    "luckyDate": "📅 Data da Sorte"
+  }
+}

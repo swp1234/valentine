@@ -1,0 +1,52 @@
+{
+  "app": {
+    "title": "Tes Kompatibilitas Valentine - Berapa Kompatibilitas Kami? 💕",
+    "description": "Temukan kompatibilitas Anda dengan nama + tanggal lahir + 5 pertanyaan! Analisis kompatibilitas nama, tanda zodiak, dan jenis cinta. Simpan dan bagikan hasil."
+  },
+  "intro": {
+    "title": "Tes Kompatibilitas\nValentine",
+    "subtitle": "Berapa Kompatibilitas Kami?",
+    "description": "Temukan kompatibilitas takdir Anda\ndengan nama + tanggal lahir + 5 pertanyaan",
+    "meta1": "💕 Kompatibilitas Nama",
+    "meta2": "⭐ Kompatibilitas Zodiak",
+    "meta3": "💌 Jenis Cinta",
+    "button": "Mulai Tes"
+  },
+  "input": {
+    "myInfo": "💕 Informasi Saya",
+    "partnerInfo": "💗 Informasi Pasangan",
+    "name": "Nama",
+    "namePlaceholder": "Masukkan nama",
+    "month": "Tanggal Lahir (Bulan)",
+    "monthPlaceholder": "Bulan",
+    "day": "Tanggal Lahir (Hari)",
+    "dayPlaceholder": "Hari",
+    "button": "Berikutnya →"
+  },
+  "question": {
+    "myAnswer": "💕 Jawaban Saya",
+    "partnerAnswer": "💗 Jawaban Pasangan"
+  },
+  "loading": {
+    "text": "Menganalisis kompatibilitas..."
+  },
+  "result": {
+    "compatibilityScore": "Kompatibilitas",
+    "deepAnalysis": "Lihat Analisis Kompatibilitas Mendalam AI",
+    "shareButton": "📤 Bagikan Hasil",
+    "saveImageButton": "📷 Simpan Gambar",
+    "retryButton": "🔄 Coba Lagi",
+    "analysisTitle": "📊 Analisis Kompatibilitas Terperinci",
+    "nameCompatibility": "💕 Kompatibilitas Nama",
+    "zodiacCompatibility": "⭐ Kompatibilitas Zodiak",
+    "typeCompatibility": "💌 Kompatibilitas Jenis",
+    "loveTypes": "💘 Jenis Cinta",
+    "tips": "💡 Tips Hubungan"
+  },
+  "premium": {
+    "deepAnalysis": "🔮 Analisis Kompatibilitas Mendalam AI",
+    "zodiacAnalysis": "⭐ Analisis Mendalam Zodiak",
+    "coupleAdvice": "💌 Saran Pasangan",
+    "luckyDate": "📅 Tanggal Beruntung"
+  }
+}

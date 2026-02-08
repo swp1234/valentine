@@ -1,0 +1,52 @@
+{
+  "app": {
+    "title": "バレンタイン相性テスト - 相性%は？ 💕",
+    "description": "名前＋誕生日＋5問で相性を発見！名前相性、星座相性、恋愛タイプを分析。結果を保存・シェア可能。"
+  },
+  "intro": {
+    "title": "バレンタイン\n相性テスト",
+    "subtitle": "相性%は？",
+    "description": "名前＋誕生日＋5問で\n運命の相性を発見しましょう",
+    "meta1": "💕 名前相性",
+    "meta2": "⭐ 星座相性",
+    "meta3": "💌 恋愛タイプ",
+    "button": "テストを開始"
+  },
+  "input": {
+    "myInfo": "💕 私の情報",
+    "partnerInfo": "💗 パートナーの情報",
+    "name": "名前",
+    "namePlaceholder": "名前を入力",
+    "month": "誕生日（月）",
+    "monthPlaceholder": "月",
+    "day": "誕生日（日）",
+    "dayPlaceholder": "日",
+    "button": "次へ →"
+  },
+  "question": {
+    "myAnswer": "💕 私の回答",
+    "partnerAnswer": "💗 パートナーの回答"
+  },
+  "loading": {
+    "text": "相性を分析中..."
+  },
+  "result": {
+    "compatibilityScore": "相性",
+    "deepAnalysis": "AI深い相性分析を表示",
+    "shareButton": "📤 結果をシェア",
+    "saveImageButton": "📷 画像を保存",
+    "retryButton": "🔄 もう一度試す",
+    "analysisTitle": "📊 詳細な相性分析",
+    "nameCompatibility": "💕 名前相性",
+    "zodiacCompatibility": "⭐ 星座相性",
+    "typeCompatibility": "💌 タイプ相性",
+    "loveTypes": "💘 恋愛タイプ",
+    "tips": "💡 関係のコツ"
+  },
+  "premium": {
+    "deepAnalysis": "🔮 AI深い相性分析",
+    "zodiacAnalysis": "⭐ 星座深い分析",
+    "coupleAdvice": "💌 カップルアドバイス",
+    "luckyDate": "📅 ラッキーデート"
+  }
+}

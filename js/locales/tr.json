@@ -1,0 +1,52 @@
+{
+  "app": {
+    "title": "Valentine Uyumluluk Testi - Uyumluluk Yüzdemiz Nedir? 💕",
+    "description": "Ad + doğum günü + 5 soru ile partnerinle uyumluluğunu bul! İsim uyumluluğu, burç işareti ve aşk tipi analiz. Sonuçları kaydet ve paylaş."
+  },
+  "intro": {
+    "title": "Valentine\nUyumluluk Testi",
+    "subtitle": "Uyumluluk Yüzdemiz Nedir?",
+    "description": "Ad + doğum günü + 5 soru ile\nkadersel uyumluluğunu keşfet",
+    "meta1": "💕 İsim Uyumluluğu",
+    "meta2": "⭐ Burç Uyumluluğu",
+    "meta3": "💌 Aşk Tipi",
+    "button": "Testi Başlat"
+  },
+  "input": {
+    "myInfo": "💕 Benim Bilgilerim",
+    "partnerInfo": "💗 Partnerin Bilgileri",
+    "name": "Ad",
+    "namePlaceholder": "Adını gir",
+    "month": "Doğum Günü (Ay)",
+    "monthPlaceholder": "Ay",
+    "day": "Doğum Günü (Gün)",
+    "dayPlaceholder": "Gün",
+    "button": "İleri →"
+  },
+  "question": {
+    "myAnswer": "💕 Benim Cevabım",
+    "partnerAnswer": "💗 Partnerin Cevabı"
+  },
+  "loading": {
+    "text": "Uyumluluk analiz ediliyor..."
+  },
+  "result": {
+    "compatibilityScore": "Uyumluluk",
+    "deepAnalysis": "YZ Derinlemesine Uyumluluk Analizini Görüntüle",
+    "shareButton": "📤 Sonucu Paylaş",
+    "saveImageButton": "📷 Resmi Kaydet",
+    "retryButton": "🔄 Tekrar Dene",
+    "analysisTitle": "📊 Detaylı Uyumluluk Analizi",
+    "nameCompatibility": "💕 İsim Uyumluluğu",
+    "zodiacCompatibility": "⭐ Burç Uyumluluğu",
+    "typeCompatibility": "💌 Tip Uyumluluğu",
+    "loveTypes": "💘 Aşk Tipleri",
+    "tips": "💡 İlişki İpuçları"
+  },
+  "premium": {
+    "deepAnalysis": "🔮 YZ Derinlemesine Uyumluluk Analizi",
+    "zodiacAnalysis": "⭐ Burç Derinlemesine Analizi",
+    "coupleAdvice": "💌 Çift Tavsiyesi",
+    "luckyDate": "📅 Şanslı Tarih"
+  }
+}

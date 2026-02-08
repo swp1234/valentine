@@ -1,0 +1,52 @@
+{
+  "app": {
+    "title": "Test de Compatibilité de la Saint-Valentin - Quelle est Notre Compatibilité %? 💕",
+    "description": "Trouve ta compatibilité avec le nom + date d'anniversaire + 5 questions! Analyse la compatibilité des noms, les signes du zodiaque et les types d'amour. Enregistre et partage les résultats."
+  },
+  "intro": {
+    "title": "Test de Compatibilité\nde la Saint-Valentin",
+    "subtitle": "Quelle est Notre Compatibilité %?",
+    "description": "Découvre ta compatibilité destinée\navec le nom + date d'anniversaire + 5 questions",
+    "meta1": "💕 Compatibilité des Noms",
+    "meta2": "⭐ Compatibilité du Zodiaque",
+    "meta3": "💌 Type d'Amour",
+    "button": "Commencer le Test"
+  },
+  "input": {
+    "myInfo": "💕 Mes Informations",
+    "partnerInfo": "💗 Informations du Partenaire",
+    "name": "Nom",
+    "namePlaceholder": "Entrez le nom",
+    "month": "Date d'Anniversaire (Mois)",
+    "monthPlaceholder": "Mois",
+    "day": "Date d'Anniversaire (Jour)",
+    "dayPlaceholder": "Jour",
+    "button": "Suivant →"
+  },
+  "question": {
+    "myAnswer": "💕 Ma Réponse",
+    "partnerAnswer": "💗 Réponse du Partenaire"
+  },
+  "loading": {
+    "text": "Analyse de la compatibilité..."
+  },
+  "result": {
+    "compatibilityScore": "Compatibilité",
+    "deepAnalysis": "Voir l'Analyse de Compatibilité Profonde IA",
+    "shareButton": "📤 Partager le Résultat",
+    "saveImageButton": "📷 Enregistrer l'Image",
+    "retryButton": "🔄 Réessayer",
+    "analysisTitle": "📊 Analyse de Compatibilité Détaillée",
+    "nameCompatibility": "💕 Compatibilité des Noms",
+    "zodiacCompatibility": "⭐ Compatibilité du Zodiaque",
+    "typeCompatibility": "💌 Compatibilité des Types",
+    "loveTypes": "💘 Types d'Amour",
+    "tips": "💡 Conseils de Relation"
+  },
+  "premium": {
+    "deepAnalysis": "🔮 Analyse de Compatibilité Profonde IA",
+    "zodiacAnalysis": "⭐ Analyse Profonde du Zodiaque",
+    "coupleAdvice": "💌 Conseils de Couple",
+    "luckyDate": "📅 Date Chanceuse"
+  }
+}

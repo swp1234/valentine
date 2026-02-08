@@ -1,0 +1,52 @@
+{
+  "app": {
+    "title": "Prueba de Compatibilidad de San Valentín - ¿Cuál es Nuestro Porcentaje de Compatibilidad? 💕",
+    "description": "¡Encuentra tu compatibilidad con nombre + cumpleaños + 5 preguntas! Analiza compatibilidad de nombres, signos zodiacales y tipos de amor. Guarda y comparte resultados."
+  },
+  "intro": {
+    "title": "Prueba de Compatibilidad\nde San Valentín",
+    "subtitle": "¿Cuál es Nuestro Porcentaje de Compatibilidad?",
+    "description": "Descubre tu compatibilidad predestinada\ncon nombre + cumpleaños + 5 preguntas",
+    "meta1": "💕 Compatibilidad de Nombres",
+    "meta2": "⭐ Compatibilidad Zodiacal",
+    "meta3": "💌 Tipo de Amor",
+    "button": "Iniciar Prueba"
+  },
+  "input": {
+    "myInfo": "💕 Mi Información",
+    "partnerInfo": "💗 Información de Pareja",
+    "name": "Nombre",
+    "namePlaceholder": "Ingresa nombre",
+    "month": "Cumpleaños (Mes)",
+    "monthPlaceholder": "Mes",
+    "day": "Cumpleaños (Día)",
+    "dayPlaceholder": "Día",
+    "button": "Siguiente →"
+  },
+  "question": {
+    "myAnswer": "💕 Mi Respuesta",
+    "partnerAnswer": "💗 Respuesta de Pareja"
+  },
+  "loading": {
+    "text": "Analizando compatibilidad..."
+  },
+  "result": {
+    "compatibilityScore": "Compatibilidad",
+    "deepAnalysis": "Ver Análisis Profundo de Compatibilidad de IA",
+    "shareButton": "📤 Compartir Resultado",
+    "saveImageButton": "📷 Guardar Imagen",
+    "retryButton": "🔄 Reintentar",
+    "analysisTitle": "📊 Análisis de Compatibilidad Detallado",
+    "nameCompatibility": "💕 Compatibilidad de Nombres",
+    "zodiacCompatibility": "⭐ Compatibilidad Zodiacal",
+    "typeCompatibility": "💌 Compatibilidad de Tipo",
+    "loveTypes": "💘 Tipos de Amor",
+    "tips": "💡 Consejos de Relación"
+  },
+  "premium": {
+    "deepAnalysis": "🔮 Análisis Profundo de Compatibilidad de IA",
+    "zodiacAnalysis": "⭐ Análisis Profundo Zodiacal",
+    "coupleAdvice": "💌 Consejo de Pareja",
+    "luckyDate": "📅 Fecha de Suerte"
+  }
+}
