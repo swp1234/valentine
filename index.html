@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="max-image-preview:large">
+
+    <!-- SEO -->
+    <title>밸런타인 궁합 테스트 - 우리의 궁합은 몇 %? 💕</title>
+    <meta name="description" content="이름+생일+5가지 질문으로 알아보는 밸런타인 궁합! 이름 획수 궁합, 별자리 궁합, 사랑 유형까지 완벽 분석. 결과 이미지 저장 & 공유.">
+    <meta name="keywords" content="밸런타인,궁합테스트,이름궁합,커플궁합,사랑테스트,연애궁합,발렌타인,2월14일,심리테스트,커플테스트">
+    <link rel="canonical" href="https://dopabrain.com/valentine/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="밸런타인 궁합 테스트 💕 - 우리의 궁합은?">
+    <meta property="og:description" content="이름+생일+5가지 질문으로 알아보는 우리 커플 궁합! 테스트 해봐! 💕">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dopabrain.com/valentine/">
+    <meta property="og:image" content="https://dopabrain.com/valentine/icon-512.svg">
+    <meta property="og:locale" content="ko_KR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="밸런타인 궁합 테스트 💕">
+    <meta name="twitter:description" content="우리의 궁합은 몇 %? 테스트 해봐!">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Quiz",
+        "name": "밸런타인 궁합 테스트",
+        "description": "이름, 생일, 5가지 질문으로 알아보는 커플 궁합 테스트",
+        "url": "https://dopabrain.com/valentine/",
+        "inLanguage": "ko",
+        "numberOfQuestions": 10,
+        "about": {
+            "@type": "Thing",
+            "name": "밸런타인데이 커플 궁합"
+        },
+        "provider": {
+            "@type": "Organization",
+            "name": "DopaBrain",
+            "url": "https://dopabrain.com/portal/"
+        }
+    }
+    </script>
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1a0011">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="icon" type="image/svg+xml" href="icon-192.svg">
+    <link rel="apple-touch-icon" href="icon-192.svg">
+
+    <!-- GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8GSWM40TV"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-J8GSWM40TV');</script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="floating-hearts"></div>
+    <div class="app-container">
+        <!-- === INTRO === -->
+        <div class="screen intro-screen active" id="intro-screen">
+            <div class="ad-banner ad-top"><span class="ad-placeholder">AD</span></div>
+            <div class="intro-content">
+                <div class="intro-icon">💕</div>
+                <h1>밸런타인<br>궁합 테스트</h1>
+                <p class="intro-sub">우리의 궁합은 몇 %?</p>
+                <p class="intro-desc">이름 + 생일 + 5가지 질문으로<br>운명적 궁합을 확인하세요</p>
+                <div class="intro-meta">
+                    <span>💕 이름 궁합</span>
+                    <span>⭐ 별자리 궁합</span>
+                    <span>💌 사랑 유형</span>
+                </div>
+                <button class="btn-start" id="btn-start">테스트 시작하기</button>
+                <p class="intro-count" id="intro-count"></p>
+            </div>
+        </div>
+
+        <!-- === INPUT === -->
+        <div class="screen input-screen hidden" id="input-screen">
+            <div class="input-card">
+                <div class="input-step-badge" id="input-step">1 / 2</div>
+                <h2 id="input-label">💕 나의 정보</h2>
+                <div class="input-fields">
+                    <div class="input-group">
+                        <label>이름</label>
+                        <input type="text" id="input-name" placeholder="이름을 입력하세요" maxlength="10" autocomplete="off">
+                    </div>
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label>생일 (월)</label>
+                            <input type="number" id="input-month" placeholder="월" min="1" max="12">
+                        </div>
+                        <div class="input-group">
+                            <label>생일 (일)</label>
+                            <input type="number" id="input-day" placeholder="일" min="1" max="31">
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-next" id="btn-next">다음 →</button>
+            </div>
+        </div>
+
+        <!-- === QUESTION === -->
+        <div class="screen question-screen hidden" id="question-screen">
+            <div class="progress-area">
+                <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+                <span class="progress-text" id="progress-text">1 / 10</span>
+            </div>
+            <div class="q-who-badge" id="q-who">💕 나의 답변</div>
+            <div class="question-card">
+                <p class="q-text" id="q-text"></p>
+                <div class="q-options" id="q-options"></div>
+            </div>
+        </div>
+
+        <!-- === LOADING === -->
+        <div class="screen loading-screen hidden" id="loading-screen">
+            <div class="loading-content">
+                <div class="loading-heart">💕</div>
+                <p class="loading-text" id="loading-text">궁합 분석 중...</p>
+                <div class="loading-bar"><div class="loading-fill" id="loading-fill"></div></div>
+            </div>
+        </div>
+
+        <!-- === RESULT === -->
+        <div class="screen result-screen hidden" id="result-screen">
+            <div class="result-card">
+                <div class="result-names" id="result-names"></div>
+
+                <div class="result-heart-area">
+                    <div class="heart-meter">
+                        <div class="heart-bg">♥</div>
+                        <div class="heart-fill-wrap">
+                            <div class="heart-fill" id="heart-fill"></div>
+                        </div>
+                    </div>
+                    <div class="result-score" id="result-score">0%</div>
+                </div>
+
+                <div class="result-emoji" id="result-emoji">💕</div>
+                <h2 class="result-title" id="result-title"></h2>
+                <p class="result-desc" id="result-desc"></p>
+
+                <div class="result-details">
+                    <h3>📊 궁합 상세 분석</h3>
+                    <div class="detail-item">
+                        <span class="detail-label">💕 이름 궁합</span>
+                        <div class="detail-bar-wrap"><div class="detail-bar" id="detail-name-bar"></div></div>
+                        <span class="detail-score" id="detail-name-score">0%</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">⭐ 별자리 궁합</span>
+                        <div class="detail-bar-wrap"><div class="detail-bar" id="detail-zodiac-bar"></div></div>
+                        <span class="detail-score" id="detail-zodiac-score">0%</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">💌 유형 궁합</span>
+                        <div class="detail-bar-wrap"><div class="detail-bar" id="detail-quiz-bar"></div></div>
+                        <span class="detail-score" id="detail-quiz-score">0%</span>
+                    </div>
+                    <p class="zodiac-info" id="zodiac-info"></p>
+                </div>
+
+                <div class="love-types">
+                    <h3>💘 사랑 유형</h3>
+                    <div class="love-type-row">
+                        <div class="love-type-card" id="love-type-1"></div>
+                        <div class="love-type-vs">×</div>
+                        <div class="love-type-card" id="love-type-2"></div>
+                    </div>
+                    <p class="love-style" id="love-style"></p>
+                </div>
+
+                <div class="result-tips">
+                    <h3>💡 연애 팁</h3>
+                    <ul id="result-tips"></ul>
+                </div>
+            </div>
+
+            <button class="btn-premium" id="btn-premium">
+                <span class="premium-icon">✨</span>
+                <span>AI 심층 궁합 분석 보기</span>
+                <span class="premium-badge">PREMIUM</span>
+            </button>
+
+            <div class="premium-result hidden" id="premium-result">
+                <div class="premium-card">
+                    <h3>🔮 AI 심층 궁합 분석</h3>
+                    <div id="premium-content"></div>
+                </div>
+            </div>
+
+            <div class="result-actions">
+                <button class="btn-share" id="btn-share">📤 결과 공유하기</button>
+                <button class="btn-save-image" id="btn-save-image">📷 이미지 저장</button>
+                <button class="btn-retry" id="btn-retry">🔄 다시 하기</button>
+            </div>
+
+            <div class="recommendations-section">
+                <div class="rec-title">이것도 해보세요</div>
+                <div class="rec-grid">
+                    <a href="https://dopabrain.com/mbti-love/" class="rec-card" target="_blank">
+                        <span class="rec-icon">💕</span>
+                        <span class="rec-info">
+                            <span class="rec-name">MBTI 연애 궁합</span>
+                            <span class="rec-desc">나와 찰떡인 MBTI 유형은?</span>
+                        </span>
+                    </a>
+                    <a href="https://dopabrain.com/love-frequency/" class="rec-card" target="_blank">
+                        <span class="rec-icon">🎵</span>
+                        <span class="rec-info">
+                            <span class="rec-name">사랑 주파수 테스트</span>
+                            <span class="rec-desc">나의 사랑 주파수는 몇 Hz?</span>
+                        </span>
+                    </a>
+                    <a href="https://dopabrain.com/emotion-temp/" class="rec-card" target="_blank">
+                        <span class="rec-icon">🌡️</span>
+                        <span class="rec-info">
+                            <span class="rec-name">감정 온도계 테스트</span>
+                            <span class="rec-desc">나의 감정 온도는 몇 도?</span>
+                        </span>
+                    </a>
+                    <a href="https://dopabrain.com/past-life/" class="rec-card" target="_blank">
+                        <span class="rec-icon">🗡️</span>
+                        <span class="rec-info">
+                            <span class="rec-name">전생 직업 테스트</span>
+                            <span class="rec-desc">나의 전생은 어떤 직업?</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="ad-banner ad-bottom"><span class="ad-placeholder">AD</span></div>
+        </div>
+
+        <!-- AD OVERLAY -->
+        <div class="overlay ad-overlay hidden" id="ad-overlay">
+            <div class="ad-modal">
+                <p class="ad-label">광고</p>
+                <div class="ad-placeholder-lg">광고 영역</div>
+                <div class="ad-timer"><span id="ad-countdown">5</span>초 후 닫기</div>
+                <button class="btn-close-ad hidden" id="btn-close-ad">✕ 닫기</button>
+            </div>
+        </div>
+
+        <!-- Hidden canvas -->
+        <canvas id="share-canvas" width="1080" height="1080" style="display:none;"></canvas>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+    <script>if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(()=>{});}</script>
+</body>
+</html>
