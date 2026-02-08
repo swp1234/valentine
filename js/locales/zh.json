@@ -1,0 +1,52 @@
+{
+  "app": {
+    "title": "情人节配对测试 - 我们的配对度是多少？💕",
+    "description": "通过姓名 + 生日 + 5个问题了解你的配对度！分析姓名配对、星座配对和爱情类型。保存和分享结果。"
+  },
+  "intro": {
+    "title": "情人节\n配对测试",
+    "subtitle": "我们的配对度是多少？",
+    "description": "通过姓名 + 生日 + 5个问题\n发现你的命定配对",
+    "meta1": "💕 姓名配对",
+    "meta2": "⭐ 星座配对",
+    "meta3": "💌 爱情类型",
+    "button": "开始测试"
+  },
+  "input": {
+    "myInfo": "💕 我的信息",
+    "partnerInfo": "💗 伴侣的信息",
+    "name": "姓名",
+    "namePlaceholder": "输入姓名",
+    "month": "生日（月份）",
+    "monthPlaceholder": "月份",
+    "day": "生日（日期）",
+    "dayPlaceholder": "日期",
+    "button": "下一步 →"
+  },
+  "question": {
+    "myAnswer": "💕 我的答案",
+    "partnerAnswer": "💗 伴侣的答案"
+  },
+  "loading": {
+    "text": "正在分析配对度..."
+  },
+  "result": {
+    "compatibilityScore": "配对度",
+    "deepAnalysis": "查看AI深度配对分析",
+    "shareButton": "📤 分享结果",
+    "saveImageButton": "📷 保存图片",
+    "retryButton": "🔄 重新测试",
+    "analysisTitle": "📊 详细配对分析",
+    "nameCompatibility": "💕 姓名配对",
+    "zodiacCompatibility": "⭐ 星座配对",
+    "typeCompatibility": "💌 类型配对",
+    "loveTypes": "💘 爱情类型",
+    "tips": "💡 恋爱建议"
+  },
+  "premium": {
+    "deepAnalysis": "🔮 AI深度配对分析",
+    "zodiacAnalysis": "⭐ 星座深度分析",
+    "coupleAdvice": "💌 情侣建议",
+    "luckyDate": "📅 幸运约会"
+  }
+}

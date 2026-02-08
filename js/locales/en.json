@@ -1,0 +1,52 @@
+{
+  "app": {
+    "title": "Valentine Compatibility Test - What's Our Compatibility %? 💕",
+    "description": "Find your compatibility with name + birthday + 5 questions! Analyze name compatibility, zodiac signs, and love types. Save and share results."
+  },
+  "intro": {
+    "title": "Valentine\nCompatibility Test",
+    "subtitle": "What's Our Compatibility %?",
+    "description": "Discover your destined compatibility\nwith name + birthday + 5 questions",
+    "meta1": "💕 Name Compatibility",
+    "meta2": "⭐ Zodiac Compatibility",
+    "meta3": "💌 Love Type",
+    "button": "Start Test"
+  },
+  "input": {
+    "myInfo": "💕 My Information",
+    "partnerInfo": "💗 Partner's Information",
+    "name": "Name",
+    "namePlaceholder": "Enter name",
+    "month": "Birthday (Month)",
+    "monthPlaceholder": "Month",
+    "day": "Birthday (Day)",
+    "dayPlaceholder": "Day",
+    "button": "Next →"
+  },
+  "question": {
+    "myAnswer": "💕 My Answer",
+    "partnerAnswer": "💗 Partner's Answer"
+  },
+  "loading": {
+    "text": "Analyzing compatibility..."
+  },
+  "result": {
+    "compatibilityScore": "Compatibility",
+    "deepAnalysis": "View AI Deep Compatibility Analysis",
+    "shareButton": "📤 Share Result",
+    "saveImageButton": "📷 Save Image",
+    "retryButton": "🔄 Retry",
+    "analysisTitle": "📊 Detailed Compatibility Analysis",
+    "nameCompatibility": "💕 Name Compatibility",
+    "zodiacCompatibility": "⭐ Zodiac Compatibility",
+    "typeCompatibility": "💌 Type Compatibility",
+    "loveTypes": "💘 Love Types",
+    "tips": "💡 Relationship Tips"
+  },
+  "premium": {
+    "deepAnalysis": "🔮 AI Deep Compatibility Analysis",
+    "zodiacAnalysis": "⭐ Zodiac Deep Analysis",
+    "coupleAdvice": "💌 Couple Advice",
+    "luckyDate": "📅 Lucky Date"
+  }
+}

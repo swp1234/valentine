@@ -1,0 +1,52 @@
+{
+  "app": {
+    "title": "밸런타인 궁합 테스트 - 우리의 궁합은 몇 %? 💕",
+    "description": "이름+생일+5가지 질문으로 알아보는 밸런타인 궁합! 이름 획수 궁합, 별자리 궁합, 사랑 유형까지 완벽 분석. 결과 이미지 저장 & 공유."
+  },
+  "intro": {
+    "title": "밸런타인\n궁합 테스트",
+    "subtitle": "우리의 궁합은 몇 %?",
+    "description": "이름 + 생일 + 5가지 질문으로\n운명적 궁합을 확인하세요",
+    "meta1": "💕 이름 궁합",
+    "meta2": "⭐ 별자리 궁합",
+    "meta3": "💌 사랑 유형",
+    "button": "테스트 시작하기"
+  },
+  "input": {
+    "myInfo": "💕 나의 정보",
+    "partnerInfo": "💗 상대방의 정보",
+    "name": "이름",
+    "namePlaceholder": "이름을 입력하세요",
+    "month": "생일 (월)",
+    "monthPlaceholder": "월",
+    "day": "생일 (일)",
+    "dayPlaceholder": "일",
+    "button": "다음 →"
+  },
+  "question": {
+    "myAnswer": "💕 나의 답변",
+    "partnerAnswer": "💗 상대방의 답변"
+  },
+  "loading": {
+    "text": "궁합 분석 중..."
+  },
+  "result": {
+    "compatibilityScore": "궁합",
+    "deepAnalysis": "AI 심층 궁합 분석 보기",
+    "shareButton": "📤 결과 공유하기",
+    "saveImageButton": "📷 이미지 저장",
+    "retryButton": "🔄 다시 하기",
+    "analysisTitle": "📊 궁합 상세 분석",
+    "nameCompatibility": "💕 이름 궁합",
+    "zodiacCompatibility": "⭐ 별자리 궁합",
+    "typeCompatibility": "💌 유형 궁합",
+    "loveTypes": "💘 사랑 유형",
+    "tips": "💡 연애 팁"
+  },
+  "premium": {
+    "deepAnalysis": "🔮 AI 심층 궁합 분석",
+    "zodiacAnalysis": "⭐ 별자리 심층 분석",
+    "coupleAdvice": "💌 커플 조언",
+    "luckyDate": "📅 행운의 데이트"
+  }
+}

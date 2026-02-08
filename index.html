@@ -7,8 +7,8 @@
     <meta name="robots" content="max-image-preview:large">
 
     <!-- SEO -->
-    <title>밸런타인 궁합 테스트 - 우리의 궁합은 몇 %? 💕</title>
-    <meta name="description" content="이름+생일+5가지 질문으로 알아보는 밸런타인 궁합! 이름 획수 궁합, 별자리 궁합, 사랑 유형까지 완벽 분석. 결과 이미지 저장 & 공유.">
+    <title data-i18n="app.title">밸런타인 궁합 테스트 - 우리의 궁합은 몇 %? 💕</title>
+    <meta name="description" data-i18n="app.description" content="이름+생일+5가지 질문으로 알아보는 밸런타인 궁합! 이름 획수 궁합, 별자리 궁합, 사랑 유형까지 완벽 분석. 결과 이미지 저장 & 공유.">
     <meta name="keywords" content="밸런타인,궁합테스트,이름궁합,커플궁합,사랑테스트,연애궁합,발렌타인,2월14일,심리테스트,커플테스트">
     <link rel="canonical" href="https://dopabrain.com/valentine/">
 
@@ -59,6 +59,18 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- 언어 선택기 -->
+    <div class="language-selector">
+      <button class="lang-btn" id="langBtn" title="언어 선택">🌐</button>
+      <div class="lang-menu hidden" id="langMenu">
+        <button class="lang-option" data-lang="ko">한국어</button>
+        <button class="lang-option" data-lang="en">English</button>
+        <button class="lang-option" data-lang="zh">简体中文</button>
+        <button class="lang-option" data-lang="hi">हिन्दी</button>
+        <button class="lang-option" data-lang="ru">Русский</button>
+      </div>
+    </div>
+
     <div class="floating-hearts"></div>
     <div class="app-container">
         <!-- === INTRO === -->
@@ -66,15 +78,15 @@
             <div class="ad-banner ad-top"><span class="ad-placeholder">AD</span></div>
             <div class="intro-content">
                 <div class="intro-icon">💕</div>
-                <h1>밸런타인<br>궁합 테스트</h1>
-                <p class="intro-sub">우리의 궁합은 몇 %?</p>
-                <p class="intro-desc">이름 + 생일 + 5가지 질문으로<br>운명적 궁합을 확인하세요</p>
+                <h1 data-i18n="intro.title">밸런타인<br>궁합 테스트</h1>
+                <p class="intro-sub" data-i18n="intro.subtitle">우리의 궁합은 몇 %?</p>
+                <p class="intro-desc" data-i18n="intro.description">이름 + 생일 + 5가지 질문으로<br>운명적 궁합을 확인하세요</p>
                 <div class="intro-meta">
-                    <span>💕 이름 궁합</span>
-                    <span>⭐ 별자리 궁합</span>
-                    <span>💌 사랑 유형</span>
+                    <span data-i18n="intro.meta1">💕 이름 궁합</span>
+                    <span data-i18n="intro.meta2">⭐ 별자리 궁합</span>
+                    <span data-i18n="intro.meta3">💌 사랑 유형</span>
                 </div>
-                <button class="btn-start" id="btn-start">테스트 시작하기</button>
+                <button class="btn-start" id="btn-start" data-i18n="intro.button">테스트 시작하기</button>
                 <p class="intro-count" id="intro-count"></p>
             </div>
         </div>
@@ -83,24 +95,24 @@
         <div class="screen input-screen hidden" id="input-screen">
             <div class="input-card">
                 <div class="input-step-badge" id="input-step">1 / 2</div>
-                <h2 id="input-label">💕 나의 정보</h2>
+                <h2 id="input-label" data-i18n="input.myInfo">💕 나의 정보</h2>
                 <div class="input-fields">
                     <div class="input-group">
-                        <label>이름</label>
-                        <input type="text" id="input-name" placeholder="이름을 입력하세요" maxlength="10" autocomplete="off">
+                        <label data-i18n="input.name">이름</label>
+                        <input type="text" id="input-name" data-i18n-placeholder="input.namePlaceholder" placeholder="이름을 입력하세요" maxlength="10" autocomplete="off">
                     </div>
                     <div class="input-row">
                         <div class="input-group">
-                            <label>생일 (월)</label>
-                            <input type="number" id="input-month" placeholder="월" min="1" max="12">
+                            <label data-i18n="input.month">생일 (월)</label>
+                            <input type="number" id="input-month" data-i18n-placeholder="input.monthPlaceholder" placeholder="월" min="1" max="12">
                         </div>
                         <div class="input-group">
-                            <label>생일 (일)</label>
-                            <input type="number" id="input-day" placeholder="일" min="1" max="31">
+                            <label data-i18n="input.day">생일 (일)</label>
+                            <input type="number" id="input-day" data-i18n-placeholder="input.dayPlaceholder" placeholder="일" min="1" max="31">
                         </div>
                     </div>
                 </div>
-                <button class="btn-next" id="btn-next">다음 →</button>
+                <button class="btn-next" id="btn-next" data-i18n="input.button">다음 →</button>
             </div>
         </div>
 
@@ -146,19 +158,19 @@
                 <p class="result-desc" id="result-desc"></p>
 
                 <div class="result-details">
-                    <h3>📊 궁합 상세 분석</h3>
+                    <h3 data-i18n="result.analysisTitle">📊 궁합 상세 분석</h3>
                     <div class="detail-item">
-                        <span class="detail-label">💕 이름 궁합</span>
+                        <span class="detail-label" data-i18n="result.nameCompatibility">💕 이름 궁합</span>
                         <div class="detail-bar-wrap"><div class="detail-bar" id="detail-name-bar"></div></div>
                         <span class="detail-score" id="detail-name-score">0%</span>
                     </div>
                     <div class="detail-item">
-                        <span class="detail-label">⭐ 별자리 궁합</span>
+                        <span class="detail-label" data-i18n="result.zodiacCompatibility">⭐ 별자리 궁합</span>
                         <div class="detail-bar-wrap"><div class="detail-bar" id="detail-zodiac-bar"></div></div>
                         <span class="detail-score" id="detail-zodiac-score">0%</span>
                     </div>
                     <div class="detail-item">
-                        <span class="detail-label">💌 유형 궁합</span>
+                        <span class="detail-label" data-i18n="result.typeCompatibility">💌 유형 궁합</span>
                         <div class="detail-bar-wrap"><div class="detail-bar" id="detail-quiz-bar"></div></div>
                         <span class="detail-score" id="detail-quiz-score">0%</span>
                     </div>
@@ -166,7 +178,7 @@
                 </div>
 
                 <div class="love-types">
-                    <h3>💘 사랑 유형</h3>
+                    <h3 data-i18n="result.loveTypes">💘 사랑 유형</h3>
                     <div class="love-type-row">
                         <div class="love-type-card" id="love-type-1"></div>
                         <div class="love-type-vs">×</div>
@@ -176,14 +188,14 @@
                 </div>
 
                 <div class="result-tips">
-                    <h3>💡 연애 팁</h3>
+                    <h3 data-i18n="result.tips">💡 연애 팁</h3>
                     <ul id="result-tips"></ul>
                 </div>
             </div>
 
             <button class="btn-premium" id="btn-premium">
                 <span class="premium-icon">✨</span>
-                <span>AI 심층 궁합 분석 보기</span>
+                <span data-i18n="result.deepAnalysis">AI 심층 궁합 분석 보기</span>
                 <span class="premium-badge">PREMIUM</span>
             </button>
 
@@ -195,9 +207,9 @@
             </div>
 
             <div class="result-actions">
-                <button class="btn-share" id="btn-share">📤 결과 공유하기</button>
-                <button class="btn-save-image" id="btn-save-image">📷 이미지 저장</button>
-                <button class="btn-retry" id="btn-retry">🔄 다시 하기</button>
+                <button class="btn-share" id="btn-share" data-i18n="result.shareButton">📤 결과 공유하기</button>
+                <button class="btn-save-image" id="btn-save-image" data-i18n="result.saveImageButton">📷 이미지 저장</button>
+                <button class="btn-retry" id="btn-retry" data-i18n="result.retryButton">🔄 다시 하기</button>
             </div>
 
             <div class="recommendations-section">
@@ -251,6 +263,35 @@
         <canvas id="share-canvas" width="1080" height="1080" style="display:none;"></canvas>
     </div>
 
+    <script src="js/i18n.js"></script>
+    <script>
+      // Initialize i18n
+      (async () => {
+        await i18n.loadTranslations(i18n.currentLang);
+        i18n.updateUI();
+
+        // Language selector
+        const langBtn = document.getElementById('langBtn');
+        const langMenu = document.getElementById('langMenu');
+
+        langBtn.addEventListener('click', () => {
+          langMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('[data-lang]').forEach(btn => {
+          btn.addEventListener('click', async (e) => {
+            const lang = e.target.getAttribute('data-lang');
+            await i18n.setLanguage(lang);
+            document.querySelectorAll('[data-lang]').forEach(b => b.classList.remove('active'));
+            e.target.classList.add('active');
+            langMenu.classList.add('hidden');
+          });
+          if (btn.getAttribute('data-lang') === i18n.currentLang) {
+            btn.classList.add('active');
+          }
+        });
+      })();
+    </script>
     <script src="js/data.js"></script>
     <script src="js/app.js"></script>
     <script>if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(()=>{});}</script>
