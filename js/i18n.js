@@ -22,7 +22,10 @@ class I18n {
     t(key) {
         const keys = key.split('.');
         let value = this.translations[this.currentLang];
-        for (const k of keys) { if (value && value[k]) value = value[k]; else return key; }
+        for (const k of keys) {
+            value = value?.[k];
+            if (!value) return key;
+        }
         return value;
     }
     async setLanguage(lang) {
