@@ -10,7 +10,8 @@
     "meta1": "💕 Name Compatibility",
     "meta2": "⭐ Zodiac Compatibility",
     "meta3": "💌 Love Type",
-    "button": "Start Test"
+    "button": "Start Test",
+    "count": "{count} people tested"
   },
   "input": {
     "myInfo": "💕 My Information",
@@ -21,14 +22,21 @@
     "monthPlaceholder": "Month",
     "day": "Birthday (Day)",
     "dayPlaceholder": "Day",
-    "button": "Next →"
+    "button": "Next →",
+    "step": "{current} / 2"
   },
   "question": {
     "myAnswer": "💕 My Answer",
-    "partnerAnswer": "💗 Partner's Answer"
+    "partnerAnswer": "💗 Partner's Answer",
+    "progress": "{current} / {total}"
   },
   "loading": {
-    "text": "Analyzing compatibility..."
+    "text": "Analyzing compatibility...",
+    "msg1": "Analyzing name compatibility...",
+    "msg2": "Checking zodiac compatibility...",
+    "msg3": "Matching love types...",
+    "msg4": "Connecting destiny's thread...",
+    "msg5": "Generating compatibility results..."
   },
   "result": {
     "compatibilityScore": "Compatibility",
@@ -41,12 +49,69 @@
     "zodiacCompatibility": "⭐ Zodiac Compatibility",
     "typeCompatibility": "💌 Type Compatibility",
     "loveTypes": "💘 Love Types",
-    "tips": "💡 Relationship Tips"
+    "tips": "💡 Relationship Tips",
+    "zodiacInfo": "{p1Emoji} {p1Name} ({p1Zodiac}) × {p2Emoji} {p2Name} ({p2Zodiac})"
   },
   "premium": {
-    "deepAnalysis": "🔮 AI Deep Compatibility Analysis",
+    "deepAnalysis": "🔮 Deep Compatibility Analysis",
     "zodiacAnalysis": "⭐ Zodiac Deep Analysis",
     "coupleAdvice": "💌 Couple Advice",
-    "luckyDate": "📅 Lucky Date"
+    "luckyDate": "📅 Lucky Date",
+    "analysisText": "{p1Name} is a <strong>{type1}</strong> who {desc1} {p2Name} is a <strong>{type2}</strong> who {desc2}",
+    "typeCompat": "Your love type compatibility score is <strong>{score}%</strong>.",
+    "zodiacText": "{z1Emoji} <strong>{z1Name}</strong> ({z1Element}) meets {z2Emoji} <strong>{z2Name}</strong> ({z2Element})!",
+    "element": {
+      "fire": "Fire",
+      "water": "Water",
+      "earth": "Earth",
+      "air": "Air"
+    },
+    "analysisResult": {
+      "fireFire": "A meeting of two flames is pure passion! You amplify each other's energy, though sometimes taking a break helps.",
+      "fireAir": "A fantastic fire-air combo! Like wind fueling a flame, you inspire and energize each other.",
+      "fireWater": "Fire and water are opposites, but that's what makes it enchanting! You balance each other's emotions perfectly.",
+      "fireEarth": "Fire and earth strengthen each other. The harmony of passion and stability is key.",
+      "waterWater": "Two fish swimming in deep emotional waters! Rich sensitivity and mutual understanding run deep.",
+      "waterEarth": "Natural harmony between water and earth! Like earth embracing water, you create stability and abundance.",
+      "waterAir": "Water and air create waves. Sometimes turbulent, but creating dynamic, transformative change!",
+      "earthEarth": "Two earth signs meeting is the most stable combination! Trust and sincerity create lasting love.",
+      "earthAir": "Earth and air differ but complement. When practical and idealistic balance, you become the perfect team.",
+      "airAir": "Two air signs meeting creates freedom and intellect! Endless conversation and fresh ideas flow.",
+      "default": "A unique elemental meeting! Your differences become your charm and special bond."
+    },
+    "coupleAdviceHigh": "You already have excellent compatibility! Don't forget to appreciate each other and share life's small joys together.",
+    "coupleAdviceMid": "You're a couple with great potential! Understanding each other's love language and adapting can deepen your bond.",
+    "coupleAdviceLow": "Differences aren't flaws! Respecting each other's worlds and moving forward slowly can create an unbreakably strong connection.",
+    "dateRecommendation": "Date recommendation: {recommendation}",
+    "luckyColor": "Lucky color: {color}"
+  },
+  "dateRecs": {
+    "SS": "Relaxing hot spring getaway ♨️",
+    "SC": "Netflix + homemade cooking 🍳",
+    "SA": "Amusement park date 🎡",
+    "ST": "Bookstore tour + cozy café 📚",
+    "CC": "Board game night at home 🎲",
+    "CA": "Scenic drive + night view 🌃",
+    "CT": "Gourmet restaurant tour 🍽️",
+    "AA": "Bungee jump or surfing 🏄",
+    "AT": "Art museum + wine bar 🍷",
+    "TT": "Cozy café + letter writing 💌",
+    "default": "Warm drinks at a café ☕"
+  },
+  "luckyColors": {
+    "high": "🔴 Red (passion), 💗 Pink (love)",
+    "mid": "🟠 Orange (warmth), 💛 Yellow (joy)",
+    "low": "💜 Purple (mystery), 💙 Blue (trust)"
+  },
+  "share": {
+    "text": "💕 Valentine Compatibility Test Result!\n{p1Name} ❤️ {p2Name}\nCompatibility {score}% - {emoji} {title}\nTake the test too 👉",
+    "clipboardSuccess": "Result copied to clipboard!"
+  },
+  "image": {
+    "title": "Valentine Compatibility Test",
+    "footer": "dopabrain.com/valentine",
+    "nameScoreLabel": "Name",
+    "zodiacScoreLabel": "Zodiac",
+    "quizScoreLabel": "Type"
   }
 }

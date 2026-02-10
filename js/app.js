@@ -31,7 +31,8 @@
         // Load count
         const count = parseInt(localStorage.getItem('valentine_count') || '0');
         if (count > 0) {
-            document.getElementById('intro-count').textContent = `${count.toLocaleString()}명이 테스트했어요`;
+            const countText = i18n.t('intro.count').replace('{count}', count.toLocaleString());
+            document.getElementById('intro-count').textContent = countText;
         }
 
         // Floating hearts
@@ -73,14 +74,17 @@
     }
 
     function updateInputUI() {
-        const label = currentPerson === 1 ? '나' : '상대방';
-        const emoji = currentPerson === 1 ? '💕' : '💗';
-        document.getElementById('input-label').textContent = `${emoji} ${label}의 정보`;
-        document.getElementById('input-step').textContent = `${currentPerson} / 2`;
+        const isMe = currentPerson === 1;
+        const infoKey = isMe ? 'input.myInfo' : 'input.partnerInfo';
+        const emoji = isMe ? '💕' : '💗';
+        document.getElementById('input-label').textContent = i18n.t(infoKey);
+        const stepText = i18n.t('input.step').replace('{current}', currentPerson);
+        document.getElementById('input-step').textContent = stepText;
         document.getElementById('input-name').value = '';
         document.getElementById('input-month').value = '';
         document.getElementById('input-day').value = '';
-        document.getElementById('input-name').placeholder = `${label}의 이름`;
+        const label = isMe ? i18n.t('input.myInfo') : i18n.t('input.partnerInfo');
+        document.getElementById('input-name').placeholder = i18n.t('input.namePlaceholder');
         document.getElementById('input-name').focus();
     }
 
@@ -131,14 +135,19 @@
         const q = QUESTIONS[currentQ];
         const who = currentPerson === 1 ? person1.name : person2.name;
         const whoEmoji = currentPerson === 1 ? '💕' : '💗';
+        const qKey = currentPerson === 1 ? 'question.myAnswer' : 'question.partnerAnswer';
+        const qText = i18n.t(qKey).replace('{name}', `${whoEmoji} ${who}님`);
 
-        document.getElementById('q-who').textContent = `${whoEmoji} ${who}님의 답변`;
+        document.getElementById('q-who').textContent = qText;
         document.getElementById('q-text').textContent = q.text;
 
         const total = QUESTIONS.length * 2;
         const current = currentQ + (currentPerson === 1 ? 0 : QUESTIONS.length);
         document.getElementById('progress-fill').style.width = ((current + 1) / total * 100) + '%';
-        document.getElementById('progress-text').textContent = `${current + 1} / ${total}`;
+        const progressText = i18n.t('question.progress')
+            .replace('{current}', current + 1)
+            .replace('{total}', total);
+        document.getElementById('progress-text').textContent = progressText;
 
         const optionsEl = document.getElementById('q-options');
         optionsEl.innerHTML = '';
@@ -187,11 +196,11 @@
         let progress = 0;
         const fill = document.getElementById('loading-fill');
         const msgs = [
-            '이름 궁합 분석 중...',
-            '별자리 궁합 확인 중...',
-            '사랑 유형 매칭 중...',
-            '운명의 실 연결 중...',
-            '궁합 결과 생성 중...'
+            i18n.t('loading.msg1'),
+            i18n.t('loading.msg2'),
+            i18n.t('loading.msg3'),
+            i18n.t('loading.msg4'),
+            i18n.t('loading.msg5')
         ];
         const msgEl = document.getElementById('loading-text');
 
@@ -486,28 +495,56 @@
         const lt1 = LOVE_TYPES[result.type1];
         const lt2 = LOVE_TYPES[result.type2];
 
+        // Get element names
+        const elements = i18n.t('premium.element');
+        const getElementName = (e) => elements[e] || e;
+
+        // Build premium content
+        const analysisTxt = i18n.t('premium.analysisText')
+            .replace('{p1Name}', person1.name)
+            .replace('{type1}', lt1.name)
+            .replace('{desc1}', lt1.desc)
+            .replace('{p2Name}', person2.name)
+            .replace('{type2}', lt2.name)
+            .replace('{desc2}', lt2.desc);
+
+        const typeCompatTxt = i18n.t('premium.typeCompat')
+            .replace('{score}', TYPE_COMPAT[result.type1 + result.type2] || 70);
+
+        const zodiacTxt = i18n.t('premium.zodiacText')
+            .replace('{z1Emoji}', result.zodiac1.emoji)
+            .replace('{z1Name}', result.zodiac1.name)
+            .replace('{z1Element}', getElementName(result.zodiac1.element))
+            .replace('{z2Emoji}', result.zodiac2.emoji)
+            .replace('{z2Name}', result.zodiac2.name)
+            .replace('{z2Element}', getElementName(result.zodiac2.element));
+
+        const coupleAdviceTxt = getCoupleAdvice(result.total, result.type1, result.type2);
+        const dateRecTxt = i18n.t('premium.dateRecommendation')
+            .replace('{recommendation}', getDateRecommendation(result.type1, result.type2));
+        const luckyColorTxt = i18n.t('premium.luckyColor')
+            .replace('{color}', getLuckyColor(result.total));
+
         const content = document.getElementById('premium-content');
         content.innerHTML = `
             <div class="premium-section">
-                <h4>🔮 심층 궁합 분석</h4>
-                <p>${person1.name}님은 <strong>${lt1.name}</strong>으로 ${lt1.desc}
-                ${person2.name}님은 <strong>${lt2.name}</strong>으로 ${lt2.desc}</p>
-                <p>두 분의 사랑 유형 궁합 점수는 <strong>${TYPE_COMPAT[result.type1 + result.type2] || 70}%</strong>입니다.</p>
+                <h4>${i18n.t('premium.deepAnalysis')}</h4>
+                <p>${analysisTxt}</p>
+                <p>${typeCompatTxt}</p>
             </div>
             <div class="premium-section">
-                <h4>⭐ 별자리 심층 분석</h4>
-                <p>${result.zodiac1.emoji} <strong>${result.zodiac1.name}</strong>(${result.zodiac1.element === 'fire' ? '불' : result.zodiac1.element === 'water' ? '물' : result.zodiac1.element === 'earth' ? '흙' : '바람'})과
-                ${result.zodiac2.emoji} <strong>${result.zodiac2.name}</strong>(${result.zodiac2.element === 'fire' ? '불' : result.zodiac2.element === 'water' ? '물' : result.zodiac2.element === 'earth' ? '흙' : '바람'})의 만남!</p>
+                <h4>${i18n.t('premium.zodiacAnalysis')}</h4>
+                <p>${zodiacTxt}</p>
                 <p>${getElementAnalysis(result.zodiac1.element, result.zodiac2.element)}</p>
             </div>
             <div class="premium-section">
-                <h4>💌 커플 조언</h4>
-                <p>${getCoupleAdvice(result.total, result.type1, result.type2)}</p>
+                <h4>${i18n.t('premium.coupleAdvice')}</h4>
+                <p>${coupleAdviceTxt}</p>
             </div>
             <div class="premium-section">
-                <h4>📅 행운의 데이트</h4>
-                <p>추천 데이트: ${getDateRecommendation(result.type1, result.type2)}</p>
-                <p>행운의 색: ${getLuckyColor(result.total)}</p>
+                <h4>${i18n.t('premium.luckyDate')}</h4>
+                <p>${dateRecTxt}</p>
+                <p>${luckyColorTxt}</p>
             </div>
         `;
 
@@ -516,67 +553,48 @@
     }
 
     function getElementAnalysis(e1, e2) {
-        const analyses = {
-            'fire-fire': '두 불의 만남은 뜨거운 열정 그 자체! 서로의 에너지를 배로 증폭시키지만, 가끔은 쉬어가는 여유도 필요해요.',
-            'fire-air': '불과 바람의 환상적인 조합! 바람이 불을 더 크게 만들듯, 서로에게 영감과 에너지를 불어넣어 줍니다.',
-            'fire-water': '불과 물은 상극이지만 그래서 더 매력적! 서로의 감정을 조절해주는 균형 잡힌 관계가 될 수 있어요.',
-            'fire-earth': '불과 흙은 서로를 단련시키는 관계. 열정과 안정감의 조화가 핵심이에요.',
-            'water-water': '깊은 감정의 바다에서 헤엄치는 두 물고기! 감수성이 풍부하고 서로의 마음을 깊이 이해합니다.',
-            'water-earth': '물과 흙의 자연스러운 조화! 흙이 물을 품듯 안정감 있고 풍요로운 관계를 만들어갑니다.',
-            'water-air': '물과 바람은 파도를 만드는 관계. 때로는 격정적이지만 새로운 변화를 만들어내는 역동적인 커플!',
-            'earth-earth': '두 대지의 만남은 가장 안정적인 조합! 신뢰와 성실함으로 오래가는 사랑을 만듭니다.',
-            'earth-air': '흙과 바람은 서로 다르지만 보완적. 현실적인 면과 이상적인 면이 균형을 이루면 최고의 팀이 됩니다.',
-            'air-air': '바람과 바람의 만남은 자유롭고 지적인 관계! 끊임없는 대화와 새로운 아이디어로 가득합니다.'
-        };
         const key1 = `${e1}-${e2}`;
         const key2 = `${e2}-${e1}`;
-        return analyses[key1] || analyses[key2] || '독특한 원소의 만남! 서로의 차이가 매력이 되는 특별한 관계입니다.';
+        const analyses = i18n.t('premium.analysisResult');
+        return analyses[key1] || analyses[key2] || i18n.t('premium.analysisResult.default');
     }
 
     function getCoupleAdvice(score, t1, t2) {
-        if (score >= 80) return '이미 훌륭한 궁합이에요! 서로에 대한 감사함을 잊지 않고, 소소한 일상의 행복을 함께 나누세요.';
-        if (score >= 60) return '좋은 잠재력을 가진 커플이에요! 서로의 사랑 언어를 이해하고 맞춰가면 더욱 깊은 관계로 발전할 수 있어요.';
-        return '다름은 틀림이 아니에요! 서로의 세계를 존중하며 천천히 다가가면, 누구보다 강한 유대감을 만들 수 있습니다.';
+        if (score >= 80) return i18n.t('premium.coupleAdviceHigh');
+        if (score >= 60) return i18n.t('premium.coupleAdviceMid');
+        return i18n.t('premium.coupleAdviceLow');
     }
 
     function getDateRecommendation(t1, t2) {
         const types = t1 + t2;
-        const recs = {
-            'SS': '따뜻한 온천 여행 ♨️',
-            'SC': '넷플릭스 + 수제 요리 🍳',
-            'SA': '놀이공원 데이트 🎡',
-            'ST': '책방 투어 + 감성 카페 📚',
-            'CC': '집에서 보드게임 밤 🎲',
-            'CA': '드라이브 + 야경 🌃',
-            'CT': '맛집 탐방 투어 🍽️',
-            'AA': '번지점프 or 서핑 🏄',
-            'AT': '미술관 + 와인바 🍷',
-            'TT': '감성 카페 + 편지 쓰기 💌'
-        };
-        return recs[types] || recs[t2 + t1] || '카페에서 따뜻한 음료와 함께 ☕';
+        const recs = i18n.t('dateRecs');
+        return recs[types] || recs[t2 + t1] || recs['default'];
     }
 
     function getLuckyColor(score) {
-        if (score >= 80) return '🔴 레드 (열정), 💗 핑크 (사랑)';
-        if (score >= 60) return '🟠 오렌지 (따뜻함), 💛 옐로 (행복)';
-        return '💜 퍼플 (신비), 💙 블루 (신뢰)';
+        const colors = i18n.t('luckyColors');
+        if (score >= 80) return colors['high'];
+        if (score >= 60) return colors['mid'];
+        return colors['low'];
     }
 
     // Share
     function shareResult() {
         const result = window._result;
         const level = window._level;
-        const text = `💕 밸런타인 궁합 테스트 결과!\n` +
-            `${person1.name} ❤️ ${person2.name}\n` +
-            `궁합 ${result.total}% - ${level.emoji} ${level.title}\n` +
-            `나도 테스트 해보기 👉`;
+        const shareText = i18n.t('share.text')
+            .replace('{p1Name}', person1.name)
+            .replace('{p2Name}', person2.name)
+            .replace('{score}', result.total)
+            .replace('{emoji}', level.emoji)
+            .replace('{title}', level.title);
         const url = 'https://dopabrain.com/valentine/';
 
         if (navigator.share) {
-            navigator.share({ title: '밸런타인 궁합 테스트', text, url }).catch(() => {});
+            navigator.share({ title: i18n.t('app.title'), text: shareText, url }).catch(() => {});
         } else {
-            navigator.clipboard.writeText(text + ' ' + url).then(() => {
-                showToast('결과가 클립보드에 복사되었어요!');
+            navigator.clipboard.writeText(shareText + ' ' + url).then(() => {
+                showToast(i18n.t('share.clipboardSuccess'));
             });
         }
     }
@@ -610,7 +628,7 @@
         ctx.font = 'bold 48px "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif';
         ctx.fillStyle = '#fff';
         ctx.textAlign = 'center';
-        ctx.fillText('밸런타인 궁합 테스트', 540, 100);
+        ctx.fillText(i18n.t('image.title'), 540, 100);
 
         // Names
         ctx.font = 'bold 56px "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif';
@@ -654,12 +672,13 @@
         // Detail scores
         ctx.font = '26px "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif';
         ctx.fillStyle = 'rgba(255,255,255,0.5)';
-        ctx.fillText(`이름 ${result.nameScore}%  |  별자리 ${result.zodiacScore}%  |  유형 ${result.quizScore}%`, 540, 900);
+        const detailText = `${i18n.t('image.nameScoreLabel')} ${result.nameScore}%  |  ${i18n.t('image.zodiacScoreLabel')} ${result.zodiacScore}%  |  ${i18n.t('image.quizScoreLabel')} ${result.quizScore}%`;
+        ctx.fillText(detailText, 540, 900);
 
         // Footer
         ctx.font = '24px "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif';
         ctx.fillStyle = 'rgba(255,255,255,0.3)';
-        ctx.fillText('dopabrain.com/valentine', 540, 1020);
+        ctx.fillText(i18n.t('image.footer'), 540, 1020);
 
         // Download
         canvas.toBlob(blob => {

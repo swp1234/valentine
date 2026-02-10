@@ -10,7 +10,8 @@
     "meta1": "💕 姓名配对",
     "meta2": "⭐ 星座配对",
     "meta3": "💌 爱情类型",
-    "button": "开始测试"
+    "button": "开始测试",
+    "count": "{count}人已测试"
   },
   "input": {
     "myInfo": "💕 我的信息",
@@ -21,14 +22,21 @@
     "monthPlaceholder": "月份",
     "day": "生日（日期）",
     "dayPlaceholder": "日期",
-    "button": "下一步 →"
+    "button": "下一步 →",
+    "step": "{current} / 2"
   },
   "question": {
     "myAnswer": "💕 我的答案",
-    "partnerAnswer": "💗 伴侣的答案"
+    "partnerAnswer": "💗 伴侣的答案",
+    "progress": "{current} / {total}"
   },
   "loading": {
-    "text": "正在分析配对度..."
+    "text": "正在分析配对度...",
+    "msg1": "正在分析姓名配对...",
+    "msg2": "正在检查星座配对...",
+    "msg3": "正在匹配爱情类型...",
+    "msg4": "正在连接命运的线...",
+    "msg5": "正在生成配对结果..."
   },
   "result": {
     "compatibilityScore": "配对度",
@@ -41,12 +49,69 @@
     "zodiacCompatibility": "⭐ 星座配对",
     "typeCompatibility": "💌 类型配对",
     "loveTypes": "💘 爱情类型",
-    "tips": "💡 恋爱建议"
+    "tips": "💡 恋爱建议",
+    "zodiacInfo": "{p1Emoji} {p1Name} ({p1Zodiac}) × {p2Emoji} {p2Name} ({p2Zodiac})"
   },
   "premium": {
-    "deepAnalysis": "🔮 AI深度配对分析",
+    "deepAnalysis": "🔮 深度配对分析",
     "zodiacAnalysis": "⭐ 星座深度分析",
     "coupleAdvice": "💌 情侣建议",
-    "luckyDate": "📅 幸运约会"
+    "luckyDate": "📅 幸运约会",
+    "analysisText": "{p1Name}是<strong>{type1}</strong>，{desc1}{p2Name}是<strong>{type2}</strong>，{desc2}",
+    "typeCompat": "两人的爱情类型配对度为<strong>{score}%</strong>。",
+    "zodiacText": "{z1Emoji} <strong>{z1Name}</strong>({z1Element})与{z2Emoji} <strong>{z2Name}</strong>({z2Element})的相遇！",
+    "element": {
+      "fire": "火",
+      "water": "水",
+      "earth": "土",
+      "air": "风"
+    },
+    "analysisResult": {
+      "fireFire": "两束火焰的相遇是纯粹的热情！你们相互放大彼此的能量，但有时也需要休息。",
+      "fireAir": "火和风的完美组合！如同风煽风火焰，你们互相激励和充满活力。",
+      "fireWater": "火和水虽是相反，但正因如此才迷人！你们能相互调节彼此的情感。",
+      "fireEarth": "火和土相互锤炼。热情与稳定的和谐是关键。",
+      "waterWater": "两条鱼在深情的海洋中游泳！敏感且相互深刻理解。",
+      "waterEarth": "水和土的自然和谐！如同土拥抱水，你们创造稳定丰富的关系。",
+      "waterAir": "水和风制造波浪。有时激烈，但创造动态的蜕变！",
+      "earthEarth": "两个土象的相遇是最稳定的组合！信任与诚实创造持久的爱。",
+      "earthAir": "土和风虽不同但互补。实际与理想的平衡使你们成为完美搭档。",
+      "airAir": "两股风的相遇创造自由与智慧！无尽的对话和新鲜想法！",
+      "default": "独特元素的相遇！你们的差异成为魅力和特殊的纽带。"
+    },
+    "coupleAdviceHigh": "你们已经配对完美！不要忘记感谢彼此，一起享受生活的小幸福。",
+    "coupleAdviceMid": "你们是充满潜力的情侣！理解彼此的爱情语言并调整可以深化你们的关系。",
+    "coupleAdviceLow": "差异不是缺陷！尊重彼此的世界，慢慢靠近能创造无比强大的联系。",
+    "dateRecommendation": "约会建议：{recommendation}",
+    "luckyColor": "幸运色：{color}"
+  },
+  "dateRecs": {
+    "SS": "温泉度假之旅 ♨️",
+    "SC": "Netflix + 手工烹饪 🍳",
+    "SA": "游乐园约会 🎡",
+    "ST": "书店之旅 + 文艺咖啡馆 📚",
+    "CC": "在家玩桌游 🎲",
+    "CA": "自驾 + 夜景 🌃",
+    "CT": "美食餐厅巡游 🍽️",
+    "AA": "蹦极跳或冲浪 🏄",
+    "AT": "美术馆 + 葡萄酒吧 🍷",
+    "TT": "文艺咖啡馆 + 写信 💌",
+    "default": "在咖啡馆喝温暖的饮料 ☕"
+  },
+  "luckyColors": {
+    "high": "🔴 红色（热情），💗 粉色（爱）",
+    "mid": "🟠 橙色（温暖），💛 黄色（快乐）",
+    "low": "💜 紫色（神秘），💙 蓝色（信任）"
+  },
+  "share": {
+    "text": "💕 情人节配对测试结果！\n{p1Name} ❤️ {p2Name}\n配对度 {score}% - {emoji} {title}\n我也来测试一下 👉",
+    "clipboardSuccess": "结果已复制到剪贴板！"
+  },
+  "image": {
+    "title": "情人节配对测试",
+    "footer": "dopabrain.com/valentine",
+    "nameScoreLabel": "姓名",
+    "zodiacScoreLabel": "星座",
+    "quizScoreLabel": "类型"
   }
 }

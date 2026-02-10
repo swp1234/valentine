@@ -10,7 +10,8 @@
     "meta1": "💕 İsim Uyumluluğu",
     "meta2": "⭐ Burç Uyumluluğu",
     "meta3": "💌 Aşk Tipi",
-    "button": "Testi Başlat"
+    "button": "Testi Başlat",
+    "count": "{count} kişi test etti"
   },
   "input": {
     "myInfo": "💕 Benim Bilgilerim",
@@ -21,14 +22,21 @@
     "monthPlaceholder": "Ay",
     "day": "Doğum Günü (Gün)",
     "dayPlaceholder": "Gün",
-    "button": "İleri →"
+    "button": "İleri →",
+    "step": "{current} / 2"
   },
   "question": {
     "myAnswer": "💕 Benim Cevabım",
-    "partnerAnswer": "💗 Partnerin Cevabı"
+    "partnerAnswer": "💗 Partnerin Cevabı",
+    "progress": "{current} / {total}"
   },
   "loading": {
-    "text": "Uyumluluk analiz ediliyor..."
+    "text": "Uyumluluk analiz ediliyor...",
+    "msg1": "İsim uyumluluğu analiz ediliyor...",
+    "msg2": "Burç uyumluluğu kontrol ediliyor...",
+    "msg3": "Aşk tipleri eşleştiriliyor...",
+    "msg4": "Kader ipliği bağlanıyor...",
+    "msg5": "Uyumluluk sonuçları oluşturuluyor..."
   },
   "result": {
     "compatibilityScore": "Uyumluluk",
@@ -41,12 +49,69 @@
     "zodiacCompatibility": "⭐ Burç Uyumluluğu",
     "typeCompatibility": "💌 Tip Uyumluluğu",
     "loveTypes": "💘 Aşk Tipleri",
-    "tips": "💡 İlişki İpuçları"
+    "tips": "💡 İlişki İpuçları",
+    "zodiacInfo": "{p1Emoji} {p1Name} ({p1Zodiac}) × {p2Emoji} {p2Name} ({p2Zodiac})"
   },
   "premium": {
-    "deepAnalysis": "🔮 YZ Derinlemesine Uyumluluk Analizi",
+    "deepAnalysis": "🔮 Derinlemesine Uyumluluk Analizi",
     "zodiacAnalysis": "⭐ Burç Derinlemesine Analizi",
     "coupleAdvice": "💌 Çift Tavsiyesi",
-    "luckyDate": "📅 Şanslı Tarih"
+    "luckyDate": "📅 Şanslı Tarih",
+    "analysisText": "{p1Name} <strong>{type1}</strong> olan {desc1} {p2Name} <strong>{type2}</strong> olan {desc2}",
+    "typeCompat": "Aşk tipi uyumluluk puanınız <strong>{score}%</strong>'dir.",
+    "zodiacText": "{z1Emoji} <strong>{z1Name}</strong> ({z1Element}) ve {z2Emoji} <strong>{z2Name}</strong> ({z2Element}) buluşması!",
+    "element": {
+      "fire": "Ateş",
+      "water": "Su",
+      "earth": "Toprak",
+      "air": "Hava"
+    },
+    "analysisResult": {
+      "fireFire": "İki ateşin buluşması saf tutkudur! Birbirinizin enerjisini katlayıp katlar, ancak bazen dinlenmeye ihtiyaç vardır.",
+      "fireAir": "Ateş ve havanın harika kombinasyonu! Hava ateşi büyütür gibi, birbirini ilham verir.",
+      "fireWater": "Ateş ve su zıt kutuplar, ancak bu onu büyüleyici kılar! Birbirinizin duygularını dengeleyebilirsiniz.",
+      "fireEarth": "Ateş ve toprak birbirini güçlendirir. Tutku ve istikrarın uyumu anahtardır.",
+      "waterWater": "İki balık derin duygusal suda yüzüyor! Duyarlılık ve derin anlayış.",
+      "waterEarth": "Su ve toprak doğal armoni! Toprak suyu kucaklar gibi, kararlı ilişki yaratırsınız.",
+      "waterAir": "Su ve hava dalgalar oluşturur. Bazen fırtınalı, ama dinamik değişim yaratır!",
+      "earthEarth": "İki toprak buluşması en istikrarlı kombinasyondur! Güven ve dürüstlük kalıcı aşk yaratır.",
+      "earthAir": "Toprak ve hava farklı ama tamamlayıcı. Pratiklik ve idealizmini dengelersen mükemmel ekip olursunuz.",
+      "airAir": "İki havanın buluşması özgürlük ve zekadır! Sonsuz sohbet ve taze fikirler.",
+      "default": "Benzersiz elemanların buluşması! Farklılıklarınız özel çekiminiz olur."
+    },
+    "coupleAdviceHigh": "Zaten mükemmel uyumluluğunuz var! Birbirinize teşekkür etmeyi unutmayın ve küçük sevgileri paylaşın.",
+    "coupleAdviceMid": "Büyük potansiyeli olan bir çiftsiniz! Birbirinizin aşk dilini anlamak ilişkiyi derinleştirebilir.",
+    "coupleAdviceLow": "Farklılık kusur değildir! Birbirinizin dünyalarına saygı göstererek sarsılmaz bir bağ yaratabilirsiniz.",
+    "dateRecommendation": "Tarih önerisi: {recommendation}",
+    "luckyColor": "Şanslı renk: {color}"
+  },
+  "dateRecs": {
+    "SS": "Sıcak su kaynağı tatili ♨️",
+    "SC": "Netflix + evde pişirme 🍳",
+    "SA": "Eğlence parkında randevu 🎡",
+    "ST": "Kitapçı + rahat kafe 📚",
+    "CC": "Evde masa oyunu gecesi 🎲",
+    "CA": "Sürüş + gece görünümü 🌃",
+    "CT": "Restoran turu 🍽️",
+    "AA": "Bungee atlayış veya sörf 🏄",
+    "AT": "Sanat müzesi + şarap barı 🍷",
+    "TT": "Rahat kafe + mektup yazma 💌",
+    "default": "Kafede sıcak içecek ☕"
+  },
+  "luckyColors": {
+    "high": "🔴 Kırmızı (tutku), 💗 Pembe (aşk)",
+    "mid": "🟠 Turuncu (sıcaklık), 💛 Sarı (mutluluk)",
+    "low": "💜 Mor (gizem), 💙 Mavi (güven)"
+  },
+  "share": {
+    "text": "💕 Valentine Uyumluluk Testi Sonucu!\n{p1Name} ❤️ {p2Name}\nUyumluluk {score}% - {emoji} {title}\nSen de dene! 👉",
+    "clipboardSuccess": "Sonuç panoya kopyalandı!"
+  },
+  "image": {
+    "title": "Valentine Uyumluluk Testi",
+    "footer": "dopabrain.com/valentine",
+    "nameScoreLabel": "Ad",
+    "zodiacScoreLabel": "Burç",
+    "quizScoreLabel": "Tip"
   }
 }

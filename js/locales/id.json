@@ -10,7 +10,8 @@
     "meta1": "💕 Kompatibilitas Nama",
     "meta2": "⭐ Kompatibilitas Zodiak",
     "meta3": "💌 Jenis Cinta",
-    "button": "Mulai Tes"
+    "button": "Mulai Tes",
+    "count": "{count} orang telah menguji"
   },
   "input": {
     "myInfo": "💕 Informasi Saya",
@@ -21,14 +22,21 @@
     "monthPlaceholder": "Bulan",
     "day": "Tanggal Lahir (Hari)",
     "dayPlaceholder": "Hari",
-    "button": "Berikutnya →"
+    "button": "Berikutnya →",
+    "step": "{current} / 2"
   },
   "question": {
     "myAnswer": "💕 Jawaban Saya",
-    "partnerAnswer": "💗 Jawaban Pasangan"
+    "partnerAnswer": "💗 Jawaban Pasangan",
+    "progress": "{current} / {total}"
   },
   "loading": {
-    "text": "Menganalisis kompatibilitas..."
+    "text": "Menganalisis kompatibilitas...",
+    "msg1": "Menganalisis kompatibilitas nama...",
+    "msg2": "Memeriksa kompatibilitas zodiak...",
+    "msg3": "Mencocokkan jenis cinta...",
+    "msg4": "Menghubungkan benang takdir...",
+    "msg5": "Menghasilkan hasil kompatibilitas..."
   },
   "result": {
     "compatibilityScore": "Kompatibilitas",
@@ -41,12 +49,69 @@
     "zodiacCompatibility": "⭐ Kompatibilitas Zodiak",
     "typeCompatibility": "💌 Kompatibilitas Jenis",
     "loveTypes": "💘 Jenis Cinta",
-    "tips": "💡 Tips Hubungan"
+    "tips": "💡 Tips Hubungan",
+    "zodiacInfo": "{p1Emoji} {p1Name} ({p1Zodiac}) × {p2Emoji} {p2Name} ({p2Zodiac})"
   },
   "premium": {
-    "deepAnalysis": "🔮 Analisis Kompatibilitas Mendalam AI",
+    "deepAnalysis": "🔮 Analisis Kompatibilitas Mendalam",
     "zodiacAnalysis": "⭐ Analisis Mendalam Zodiak",
     "coupleAdvice": "💌 Saran Pasangan",
-    "luckyDate": "📅 Tanggal Beruntung"
+    "luckyDate": "📅 Tanggal Beruntung",
+    "analysisText": "{p1Name} adalah <strong>{type1}</strong> yang {desc1} {p2Name} adalah <strong>{type2}</strong> yang {desc2}",
+    "typeCompat": "Skor kompatibilitas jenis cinta Anda adalah <strong>{score}%</strong>.",
+    "zodiacText": "{z1Emoji} <strong>{z1Name}</strong> ({z1Element}) bertemu {z2Emoji} <strong>{z2Name}</strong> ({z2Element})!",
+    "element": {
+      "fire": "Api",
+      "water": "Air",
+      "earth": "Bumi",
+      "air": "Udara"
+    },
+    "analysisResult": {
+      "fireFire": "Dua api yang bertemu adalah gairah murni! Kalian saling memperkuat energi, tetapi kadang perlu istirahat.",
+      "fireAir": "Kombinasi fantastis api dan udara! Seperti angin meniup api, kalian saling menginspirasi.",
+      "fireWater": "Api dan air berlawanan, tapi itulah yang membuatnya menarik! Kalian menyeimbangkan emosi satu sama lain.",
+      "fireEarth": "Api dan bumi saling menguatkan. Harmoni gairah dan stabilitas adalah kuncinya.",
+      "waterWater": "Dua ikan berenang di laut emosi yang dalam! Sensitivitas dan pemahaman yang mendalam.",
+      "waterEarth": "Harmoni alami air dan bumi! Seperti bumi merangkul air, kalian menciptakan hubungan yang stabil.",
+      "waterAir": "Air dan udara menciptakan gelombang. Kadang bergejolak, tetapi menciptakan perubahan dinamis!",
+      "earthEarth": "Dua bumi yang bertemu adalah kombinasi paling stabil! Kepercayaan dan kejujuran menciptakan cinta yang bertahan.",
+      "earthAir": "Bumi dan udara berbeda tetapi saling melengkapi. Keseimbangan praktis dan ideal.",
+      "airAir": "Dua udara yang bertemu menciptakan kebebasan dan intelektual! Percakapan tak terbatas dan ide segar.",
+      "default": "Pertemuan elemen yang unik! Perbedaan kalian menjadi daya tarik khusus."
+    },
+    "coupleAdviceHigh": "Kalian sudah memiliki kompatibilitas yang sangat baik! Jangan lupa saling berterima kasih dan berbagi kebahagiaan kecil.",
+    "coupleAdviceMid": "Kalian adalah pasangan dengan potensi besar! Memahami bahasa cinta satu sama lain dapat memperdalam hubungan.",
+    "coupleAdviceLow": "Perbedaan bukan kekurangan! Menghormati dunia satu sama lain dapat menciptakan ikatan yang tak tergoyahkan.",
+    "dateRecommendation": "Rekomendasi kencan: {recommendation}",
+    "luckyColor": "Warna keberuntungan: {color}"
+  },
+  "dateRecs": {
+    "SS": "Perjalanan ke mata air panas ♨️",
+    "SC": "Netflix + memasak rumahan 🍳",
+    "SA": "Kencan di taman hiburan 🎡",
+    "ST": "Toko buku + kafe nyaman 📚",
+    "CC": "Malam bermain permainan papan 🎲",
+    "CA": "Berkendara + pemandangan malam 🌃",
+    "CT": "Tur restoran 🍽️",
+    "AA": "Bungee jumping atau selancar 🏄",
+    "AT": "Museum seni + wine bar 🍷",
+    "TT": "Kafe nyaman + menulis surat 💌",
+    "default": "Minuman panas di kafe ☕"
+  },
+  "luckyColors": {
+    "high": "🔴 Merah (gairah), 💗 Merah muda (cinta)",
+    "mid": "🟠 Oranye (kehangatan), 💛 Kuning (kegembiraan)",
+    "low": "💜 Ungu (misteri), 💙 Biru (kepercayaan)"
+  },
+  "share": {
+    "text": "💕 Hasil Tes Kompatibilitas Valentine!\n{p1Name} ❤️ {p2Name}\nKompatibilitas {score}% - {emoji} {title}\nCoba juga! 👉",
+    "clipboardSuccess": "Hasil disalin ke papan klip!"
+  },
+  "image": {
+    "title": "Tes Kompatibilitas Valentine",
+    "footer": "dopabrain.com/valentine",
+    "nameScoreLabel": "Nama",
+    "zodiacScoreLabel": "Zodiak",
+    "quizScoreLabel": "Jenis"
   }
 }

@@ -10,7 +10,8 @@
     "meta1": "💕 Namenskompatibilität",
     "meta2": "⭐ Sternzeichen-Kompatibilität",
     "meta3": "💌 Liebestyp",
-    "button": "Test starten"
+    "button": "Test starten",
+    "count": "{count} Menschen haben getestet"
   },
   "input": {
     "myInfo": "💕 Meine Informationen",
@@ -21,14 +22,21 @@
     "monthPlaceholder": "Monat",
     "day": "Geburtstag (Tag)",
     "dayPlaceholder": "Tag",
-    "button": "Weiter →"
+    "button": "Weiter →",
+    "step": "{current} / 2"
   },
   "question": {
     "myAnswer": "💕 Meine Antwort",
-    "partnerAnswer": "💗 Antwort des Partners"
+    "partnerAnswer": "💗 Antwort des Partners",
+    "progress": "{current} / {total}"
   },
   "loading": {
-    "text": "Analysiere Kompatibilität..."
+    "text": "Analysiere Kompatibilität...",
+    "msg1": "Analysiere Namenskompatibilität...",
+    "msg2": "Überprüfe Sternzeichen-Kompatibilität...",
+    "msg3": "Passe Liebestypen an...",
+    "msg4": "Verbinde Schicksalsfaden...",
+    "msg5": "Generiere Kompatibilitätsergebnisse..."
   },
   "result": {
     "compatibilityScore": "Kompatibilität",
@@ -41,12 +49,69 @@
     "zodiacCompatibility": "⭐ Sternzeichen-Kompatibilität",
     "typeCompatibility": "💌 Typ-Kompatibilität",
     "loveTypes": "💘 Liebestypen",
-    "tips": "💡 Beziehungstipps"
+    "tips": "💡 Beziehungstipps",
+    "zodiacInfo": "{p1Emoji} {p1Name} ({p1Zodiac}) × {p2Emoji} {p2Name} ({p2Zodiac})"
   },
   "premium": {
-    "deepAnalysis": "🔮 Tiefe KI-Kompatibilitätsanalyse",
+    "deepAnalysis": "🔮 Tiefe Kompatibilitätsanalyse",
     "zodiacAnalysis": "⭐ Tiefe Sternzeichen-Analyse",
     "coupleAdvice": "💌 Paar-Rat",
-    "luckyDate": "📅 Glückstag"
+    "luckyDate": "📅 Glückstag",
+    "analysisText": "{p1Name} ist ein <strong>{type1}</strong>, das {desc1} {p2Name} ist ein <strong>{type2}</strong>, das {desc2}",
+    "typeCompat": "Ihr Liebestyp-Kompatibilitätswert beträgt <strong>{score}%</strong>.",
+    "zodiacText": "{z1Emoji} <strong>{z1Name}</strong> ({z1Element}) trifft {z2Emoji} <strong>{z2Name}</strong> ({z2Element})!",
+    "element": {
+      "fire": "Feuer",
+      "water": "Wasser",
+      "earth": "Erde",
+      "air": "Luft"
+    },
+    "analysisResult": {
+      "fireFire": "Zwei Feuer treffen sich - pure Leidenschaft! Ihr vervielfacht die Energie des anderen, manchmal braucht es aber auch eine Pause.",
+      "fireAir": "Eine fantastische Feuer-Luft-Kombination! Wie Wind das Feuer entfacht, inspiriert ihr euch gegenseitig.",
+      "fireWater": "Feuer und Wasser sind gegensätzlich, aber genau das macht es reizvoll! Ihr balanciert die Emotionen des anderen aus.",
+      "fireEarth": "Feuer und Erde stärken sich gegenseitig. Die Harmonie von Leidenschaft und Stabilität ist der Schlüssel.",
+      "waterWater": "Zwei Fische schwimmen in tiefen emotionalen Gewässern! Sensibilität und tiefes Verständnis.",
+      "waterEarth": "Natürliche Harmonie zwischen Wasser und Erde! Wie Erde das Wasser hält, schafft ihr eine stabile Beziehung.",
+      "waterAir": "Wasser und Luft erzeugen Wellen. Manchmal stürmisch, aber schafft dynamische Veränderung!",
+      "earthEarth": "Zwei Erden treffen sich - die stabilste Kombination! Vertrauen und Aufrichtigkeit schaffen dauernde Liebe.",
+      "earthAir": "Erde und Luft sind verschieden, aber ergänzen sich. Praktik und Idealismus im Gleichgewicht.",
+      "airAir": "Zwei Lüfte treffen sich - Freiheit und Intellekt! Endlose Gespräche und frische Ideen.",
+      "default": "Treffen einzigartiger Elemente! Eure Unterschiede werden zur Faszination."
+    },
+    "coupleAdviceHigh": "Ihr habt bereits hervorragende Kompatibilität! Vergesst nicht, euch gegenseitig zu schätzen und kleine Freuden zu teilen.",
+    "coupleAdviceMid": "Ihr seid ein Paar mit großem Potenzial! Wenn ihr die Liebessprache des anderen versteht, kann die Beziehung tiefer werden.",
+    "coupleAdviceLow": "Unterschiede sind keine Mängel! Wenn ihr die Welten des anderen respektiert, könnt ihr eine unerschütterliche Bindung aufbauen.",
+    "dateRecommendation": "Datierungsvorschlag: {recommendation}",
+    "luckyColor": "Glücksfarbe: {color}"
+  },
+  "dateRecs": {
+    "SS": "Reise zu heißen Quellen ♨️",
+    "SC": "Netflix + hausgemachte Küche 🍳",
+    "SA": "Freizeitparkbesuch 🎡",
+    "ST": "Buchhandlung + gemütliches Café 📚",
+    "CC": "Brettspielabend zuhause 🎲",
+    "CA": "Autofahrt + Nachtaussicht 🌃",
+    "CT": "Restauranttour 🍽️",
+    "AA": "Bungeespringen oder Surfen 🏄",
+    "AT": "Kunstmuseum + Weinbar 🍷",
+    "TT": "Gemütliches Café + Briefe schreiben 💌",
+    "default": "Warmes Getränk im Café ☕"
+  },
+  "luckyColors": {
+    "high": "🔴 Rot (Leidenschaft), 💗 Rosa (Liebe)",
+    "mid": "🟠 Orange (Wärme), 💛 Gelb (Freude)",
+    "low": "💜 Lila (Geheimnis), 💙 Blau (Vertrauen)"
+  },
+  "share": {
+    "text": "💕 Valentine Kompatibilität Test Ergebnis!\n{p1Name} ❤️ {p2Name}\nKompatibilität {score}% - {emoji} {title}\nMach auch du den Test! 👉",
+    "clipboardSuccess": "Ergebnis in die Zwischenablage kopiert!"
+  },
+  "image": {
+    "title": "Valentine Kompatibilität Test",
+    "footer": "dopabrain.com/valentine",
+    "nameScoreLabel": "Name",
+    "zodiacScoreLabel": "Sternzeichen",
+    "quizScoreLabel": "Typ"
   }
 }

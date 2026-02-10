@@ -10,7 +10,8 @@
     "meta1": "💕 名前相性",
     "meta2": "⭐ 星座相性",
     "meta3": "💌 恋愛タイプ",
-    "button": "テストを開始"
+    "button": "テストを開始",
+    "count": "{count}人がテスト済み"
   },
   "input": {
     "myInfo": "💕 私の情報",
@@ -21,14 +22,21 @@
     "monthPlaceholder": "月",
     "day": "誕生日（日）",
     "dayPlaceholder": "日",
-    "button": "次へ →"
+    "button": "次へ →",
+    "step": "{current} / 2"
   },
   "question": {
     "myAnswer": "💕 私の回答",
-    "partnerAnswer": "💗 パートナーの回答"
+    "partnerAnswer": "💗 パートナーの回答",
+    "progress": "{current} / {total}"
   },
   "loading": {
-    "text": "相性を分析中..."
+    "text": "相性を分析中...",
+    "msg1": "名前相性を分析中...",
+    "msg2": "星座相性を確認中...",
+    "msg3": "恋愛タイプをマッチング中...",
+    "msg4": "運命の糸を繋いでいます...",
+    "msg5": "相性結果を生成中..."
   },
   "result": {
     "compatibilityScore": "相性",
@@ -41,12 +49,69 @@
     "zodiacCompatibility": "⭐ 星座相性",
     "typeCompatibility": "💌 タイプ相性",
     "loveTypes": "💘 恋愛タイプ",
-    "tips": "💡 関係のコツ"
+    "tips": "💡 関係のコツ",
+    "zodiacInfo": "{p1Emoji} {p1Name} ({p1Zodiac}) × {p2Emoji} {p2Name} ({p2Zodiac})"
   },
   "premium": {
-    "deepAnalysis": "🔮 AI深い相性分析",
+    "deepAnalysis": "🔮 深い相性分析",
     "zodiacAnalysis": "⭐ 星座深い分析",
     "coupleAdvice": "💌 カップルアドバイス",
-    "luckyDate": "📅 ラッキーデート"
+    "luckyDate": "📅 ラッキーデート",
+    "analysisText": "{p1Name}は<strong>{type1}</strong>で{desc1}{p2Name}は<strong>{type2}</strong>で{desc2}",
+    "typeCompat": "二人の恋愛タイプ相性度は<strong>{score}%</strong>です。",
+    "zodiacText": "{z1Emoji} <strong>{z1Name}</strong>({z1Element})と{z2Emoji} <strong>{z2Name}</strong>({z2Element})の出会い！",
+    "element": {
+      "fire": "火",
+      "water": "水",
+      "earth": "土",
+      "air": "風"
+    },
+    "analysisResult": {
+      "fireFire": "二つの炎の出会いは純粋な情熱そのもの！互いのエネルギーを倍増させますが、時には休息も必要ですね。",
+      "fireAir": "火と風の素晴らしい組み合わせ！風が炎をより大きくするように、互いにインスピレーションとエネルギーを吹き込みます。",
+      "fireWater": "火と水は相反しますが、だからこそ魅力的！互いの感情を調整する、バランスの取れた関係になれます。",
+      "fireEarth": "火と土は互いを鍛える関係。情熱と安定のバランスが鍵です。",
+      "waterWater": "二匹の魚が深い感情の海で泳ぐように！感受性豊かで、互いの心を深く理解します。",
+      "waterEarth": "水と土の自然な調和！土が水を包むように、安定感のある豊かな関係を築いていきます。",
+      "waterAir": "水と風は波を作る関係。時には情熱的ですが、新しい変化をもたらすダイナミックなカップル！",
+      "earthEarth": "二つの大地の出会いは最も安定した組み合わせ！信頼と誠実さで長く続く愛を築きます。",
+      "earthAir": "土と風は異なりますが補完的。現実的な面と理想的な面がバランスを取れば、最高のチームになります。",
+      "airAir": "二つの風の出会いは自由で知的な関係！尽きない会話と新しいアイデアで満ちています。",
+      "default": "ユニークな元素の出会い！互いの違いが魅力となる特別な関係です。"
+    },
+    "coupleAdviceHigh": "既に素晴らしい相性です！互いに感謝の気持ちを忘れず、日常の小さな幸せを一緒に分かち合ってください。",
+    "coupleAdviceMid": "潜在力のあるカップルです！互いの愛情表現を理解し、合わせることで、より深い関係へ発展できます。",
+    "coupleAdviceLow": "違いは間違いではありません！互いの世界を尊重し、ゆっくり近づくことで、誰よりも強い絆を作れます。",
+    "dateRecommendation": "デート提案：{recommendation}",
+    "luckyColor": "ラッキーカラー：{color}"
+  },
+  "dateRecs": {
+    "SS": "温泉旅行 ♨️",
+    "SC": "Netflix + 手作り料理 🍳",
+    "SA": "遊園地デート 🎡",
+    "ST": "本屋ツアー + 感性カフェ 📚",
+    "CC": "家でボードゲームナイト 🎲",
+    "CA": "ドライブ + 夜景 🌃",
+    "CT": "グルメレストランツアー 🍽️",
+    "AA": "バンジージャンプ or サーフィン 🏄",
+    "AT": "美術館 + ワインバー 🍷",
+    "TT": "感性カフェ + 手紙を書く 💌",
+    "default": "カフェで温かい飲み物を一緒に ☕"
+  },
+  "luckyColors": {
+    "high": "🔴 レッド（情熱），💗 ピンク（愛）",
+    "mid": "🟠 オレンジ（温かさ），💛 イエロー（幸せ）",
+    "low": "💜 パープル（神秘），💙 ブルー（信頼）"
+  },
+  "share": {
+    "text": "💕 バレンタイン相性テスト結果！\n{p1Name} ❤️ {p2Name}\n相性 {score}% - {emoji} {title}\nあなたも試してみて 👉",
+    "clipboardSuccess": "結果がクリップボードにコピーされました！"
+  },
+  "image": {
+    "title": "バレンタイン相性テスト",
+    "footer": "dopabrain.com/valentine",
+    "nameScoreLabel": "名前",
+    "zodiacScoreLabel": "星座",
+    "quizScoreLabel": "タイプ"
   }
 }
