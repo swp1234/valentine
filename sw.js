@@ -1,4 +1,4 @@
-const CACHE_NAME = 'valentine-v1';
+const CACHE_NAME = 'valentine-v2';
 const ASSETS = [
     '/valentine/',
     '/valentine/index.html',
@@ -24,6 +24,10 @@ self.addEventListener('activate', e => {
 
 self.addEventListener('fetch', e => {
     e.respondWith(
-        caches.match(e.request).then(r => r || fetch(e.request))
+        fetch(e.request).then(r => {
+            const c = r.clone();
+            caches.open(CACHE_NAME).then(cache => cache.put(e.request, c));
+            return r;
+        }).catch(() => caches.match(e.request))
     );
 });
