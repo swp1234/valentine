@@ -602,3 +602,388 @@ button,a[href],input[type="button"],input[type="submit"],[role="button"]{min-wid
 
 @media (prefers-contrast: more){button{border:2px solid #f472b6;}}
 .rec-card:focus-visible{outline:3px solid #f472b6;outline-offset:4px;}
+
+/* ===================== LIGHT MODE ===================== */
+[data-theme="light"] {
+    --pink: #ff4b91;
+    --pink-dark: #d63384;
+    --pink-light: #ff6ba8;
+    --red: #ff2d55;
+    --bg: #f5f5fa;
+    --bg2: #ffffff;
+    --card: rgba(255, 255, 255, 0.9);
+    --border: rgba(0, 0, 0, 0.08);
+    --text: #1a1a2e;
+    --text-sub: #4a4a6e;
+    --radius: 20px;
+}
+
+[data-theme="light"] body {
+    background: linear-gradient(135deg, var(--bg) 0%, var(--bg2) 50%, #f0f0f5 100%);
+    color: var(--text);
+}
+
+[data-theme="light"] .app-loader {
+    background: var(--bg);
+}
+
+[data-theme="light"] .lang-btn {
+    background: rgba(255, 75, 145, 0.15);
+    border-color: rgba(255, 75, 145, 0.25);
+    color: var(--pink);
+}
+
+[data-theme="light"] .lang-btn:hover {
+    background: rgba(255, 75, 145, 0.25);
+}
+
+[data-theme="light"] .lang-menu {
+    background: rgba(255, 255, 255, 0.98);
+    border-color: rgba(255, 75, 145, 0.2);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="light"] .lang-option {
+    color: #4a4a6e;
+}
+
+[data-theme="light"] .lang-option:hover {
+    background: rgba(255, 75, 145, 0.1);
+}
+
+[data-theme="light"] .lang-option.active {
+    background: rgba(255, 75, 145, 0.15);
+    color: var(--pink);
+}
+
+[data-theme="light"] .intro-sub,
+[data-theme="light"] .intro-desc,
+[data-theme="light"] .intro-meta,
+[data-theme="light"] .intro-count {
+    color: var(--text-sub);
+}
+
+[data-theme="light"] .intro-badge {
+    background: rgba(255, 75, 145, 0.12);
+    color: var(--pink);
+}
+
+[data-theme="light"] .ad-placeholder {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="light"] .input-card {
+    background: var(--card);
+    border-color: var(--border);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .input-step-badge {
+    background: rgba(255, 75, 145, 0.15);
+    color: var(--pink);
+}
+
+[data-theme="light"] .input-group label {
+    color: var(--text-sub);
+}
+
+[data-theme="light"] .input-group input {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(0, 0, 0, 0.12);
+    color: var(--text);
+}
+
+[data-theme="light"] .input-group input:focus {
+    border-color: var(--pink);
+}
+
+[data-theme="light"] .input-group input::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="light"] .progress-bar {
+    background: rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .progress-text {
+    color: var(--text-sub);
+}
+
+[data-theme="light"] .q-who-badge {
+    background: rgba(255, 75, 145, 0.12);
+    border-color: rgba(255, 75, 145, 0.2);
+    color: var(--pink);
+}
+
+[data-theme="light"] .question-card {
+    background: var(--card);
+    border-color: var(--border);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .q-text {
+    color: var(--text);
+}
+
+[data-theme="light"] .q-option {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(0, 0, 0, 0.1);
+    color: var(--text);
+}
+
+[data-theme="light"] .q-option:hover {
+    background: rgba(255, 75, 145, 0.12);
+    border-color: var(--pink);
+}
+
+[data-theme="light"] .q-option.selected {
+    background: rgba(255, 75, 145, 0.2);
+    border-color: var(--pink);
+}
+
+[data-theme="light"] .loading-text {
+    color: var(--text-sub);
+}
+
+[data-theme="light"] .loading-bar {
+    background: rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .result-card {
+    background: var(--card);
+    border-color: var(--border);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .name-tag {
+    background: rgba(255, 75, 145, 0.15);
+    color: var(--pink);
+}
+
+[data-theme="light"] .heart-bg {
+    color: rgba(255, 75, 145, 0.2);
+}
+
+[data-theme="light"] .result-title {
+    color: var(--text);
+}
+
+[data-theme="light"] .result-desc {
+    color: var(--text-sub);
+}
+
+[data-theme="light"] .result-details {
+    border-top-color: var(--border);
+}
+
+[data-theme="light"] .detail-label {
+    color: var(--text-sub);
+}
+
+[data-theme="light"] .detail-bar-wrap {
+    background: rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .detail-score {
+    color: var(--pink-light);
+}
+
+[data-theme="light"] .zodiac-info {
+    color: var(--text-sub);
+}
+
+[data-theme="light"] .love-types {
+    border-top-color: var(--border);
+}
+
+[data-theme="light"] .love-type-card {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+[data-theme="light"] .lt-name {
+    color: var(--text);
+}
+
+[data-theme="light"] .lt-type {
+    color: var(--pink-light);
+}
+
+[data-theme="light"] .love-type-vs {
+    color: var(--text-sub);
+}
+
+[data-theme="light"] .love-style {
+    color: var(--text-sub);
+}
+
+[data-theme="light"] .result-tips {
+    border-top-color: var(--border);
+}
+
+[data-theme="light"] .result-tips li {
+    color: var(--text-sub);
+    border-bottom-color: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .btn-premium {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 165, 0, 0.15));
+    border-color: rgba(255, 215, 0, 0.4);
+    color: #d4a017;
+}
+
+[data-theme="light"] .btn-premium:hover {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.3), rgba(255, 165, 0, 0.2));
+}
+
+[data-theme="light"] .premium-badge {
+    background: rgba(255, 215, 0, 0.3);
+}
+
+[data-theme="light"] .premium-card {
+    background: rgba(255, 215, 0, 0.08);
+    border-color: rgba(255, 215, 0, 0.2);
+}
+
+[data-theme="light"] .premium-card h3 {
+    color: #d4a017;
+}
+
+[data-theme="light"] .premium-section {
+    border-bottom-color: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .premium-section h4 {
+    color: #d4a017;
+}
+
+[data-theme="light"] .premium-section p {
+    color: var(--text-sub);
+}
+
+[data-theme="light"] .result-actions button {
+    background: var(--card);
+    border-color: var(--border);
+    color: var(--text);
+}
+
+[data-theme="light"] .result-actions button:hover {
+    background: rgba(255, 75, 145, 0.12);
+}
+
+[data-theme="light"] .rec-title {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="light"] .rec-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(0, 0, 0, 0.1);
+    color: var(--text);
+}
+
+[data-theme="light"] .rec-card:hover {
+    background: rgba(255, 255, 255, 1);
+}
+
+[data-theme="light"] .rec-name {
+    color: var(--text);
+}
+
+[data-theme="light"] .rec-desc {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="light"] .overlay {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+[data-theme="light"] .ad-modal {
+    background: var(--bg2);
+}
+
+[data-theme="light"] .ad-label {
+    color: var(--text-sub);
+}
+
+[data-theme="light"] .ad-placeholder-lg {
+    background: rgba(0, 0, 0, 0.05);
+    color: var(--text-sub);
+}
+
+[data-theme="light"] .ad-timer {
+    color: var(--text-sub);
+}
+
+[data-theme="light"] .toast {
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--text);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="light"] .back-link {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="light"] .back-link:hover {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    position: fixed;
+    top: 12px;
+    right: 56px;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+[data-theme="light"] .theme-toggle {
+    background: rgba(255, 75, 145, 0.1);
+    border-color: rgba(255, 75, 145, 0.2);
+}
+
+[data-theme="light"] .theme-toggle:hover {
+    background: rgba(255, 75, 145, 0.2);
+}
+
+/* Scrollbar for light mode */
+[data-theme="light"] ::-webkit-scrollbar-track {
+    background: #f5f5fa;
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb {
+    background: rgba(255, 75, 145, 0.3);
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 75, 145, 0.5);
+}
+
+[data-theme="light"] * {
+    scrollbar-color: rgba(255, 75, 145, 0.3) #f5f5fa;
+}
+
+/* Selection color for light mode */
+[data-theme="light"] ::selection {
+    background: #ff4b91;
+    color: white;
+}
+
+[data-theme="light"] ::-moz-selection {
+    background: #ff4b91;
+    color: white;
+}
