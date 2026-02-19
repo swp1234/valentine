@@ -113,5 +113,14 @@
     "nameScoreLabel": "नाम",
     "zodiacScoreLabel": "राशि",
     "quizScoreLabel": "प्रकार"
+  },
+  "ads": {
+    "label": "विज्ञापन",
+    "banner": "विज्ञापन क्षेत्र",
+    "closeIn": "सेकंड बाद बंद",
+    "close": "✕ बंद करें"
+  },
+  "valentine": {
+    "introBadge": "💝 वेलेंटाइन डे से पहले जांचें"
   }
 }

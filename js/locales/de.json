@@ -113,5 +113,14 @@
     "nameScoreLabel": "Name",
     "zodiacScoreLabel": "Sternzeichen",
     "quizScoreLabel": "Typ"
+  },
+  "ads": {
+    "label": "Anzeige",
+    "banner": "Anzeigenbereich",
+    "closeIn": "Sek. zum Schließen",
+    "close": "✕ Schließen"
+  },
+  "valentine": {
+    "introBadge": "💝 Vor dem Valentinstag prüfen"
   }
 }

@@ -113,5 +113,14 @@
     "nameScoreLabel": "名前",
     "zodiacScoreLabel": "星座",
     "quizScoreLabel": "タイプ"
+  },
+  "ads": {
+    "label": "広告",
+    "banner": "広告エリア",
+    "closeIn": "秒後に閉じる",
+    "close": "✕ 閉じる"
+  },
+  "valentine": {
+    "introBadge": "💝 バレンタイン前に確認しよう"
   }
 }

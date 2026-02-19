@@ -113,5 +113,14 @@
     "nameScoreLabel": "Nama",
     "zodiacScoreLabel": "Zodiak",
     "quizScoreLabel": "Jenis"
+  },
+  "ads": {
+    "label": "Iklan",
+    "banner": "Area iklan",
+    "closeIn": "dtk untuk tutup",
+    "close": "✕ Tutup"
+  },
+  "valentine": {
+    "introBadge": "💝 Cek sebelum Hari Valentine"
   }
 }

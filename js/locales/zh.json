@@ -113,5 +113,14 @@
     "nameScoreLabel": "姓名",
     "zodiacScoreLabel": "星座",
     "quizScoreLabel": "类型"
+  },
+  "ads": {
+    "label": "广告",
+    "banner": "广告区域",
+    "closeIn": "秒后关闭",
+    "close": "✕ 关闭"
+  },
+  "valentine": {
+    "introBadge": "💝 情人节前快来确认"
   }
 }

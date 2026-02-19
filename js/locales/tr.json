@@ -113,5 +113,14 @@
     "nameScoreLabel": "Ad",
     "zodiacScoreLabel": "Burç",
     "quizScoreLabel": "Tip"
+  },
+  "ads": {
+    "label": "Reklam",
+    "banner": "Reklam alanı",
+    "closeIn": "sn sonra kapat",
+    "close": "✕ Kapat"
+  },
+  "valentine": {
+    "introBadge": "💝 Sevgililer Günü'nden önce kontrol edin"
   }
 }

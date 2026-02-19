@@ -113,5 +113,14 @@
     "nameScoreLabel": "Nome",
     "zodiacScoreLabel": "Zodíaco",
     "quizScoreLabel": "Tipo"
+  },
+  "ads": {
+    "label": "Anúncio",
+    "banner": "Área de anúncio",
+    "closeIn": "seg para fechar",
+    "close": "✕ Fechar"
+  },
+  "valentine": {
+    "introBadge": "💝 Verifique antes do Dia dos Namorados"
   }
 }

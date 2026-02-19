@@ -113,5 +113,14 @@
     "nameScoreLabel": "이름",
     "zodiacScoreLabel": "별자리",
     "quizScoreLabel": "유형"
+  },
+  "ads": {
+    "label": "광고",
+    "banner": "광고 영역",
+    "closeIn": "초 후 닫기",
+    "close": "✕ 닫기"
+  },
+  "valentine": {
+    "introBadge": "💝 D-4! 발렌타인 전에 확인하세요"
   }
 }

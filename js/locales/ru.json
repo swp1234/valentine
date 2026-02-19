@@ -113,5 +113,14 @@
     "nameScoreLabel": "Имя",
     "zodiacScoreLabel": "Зодиак",
     "quizScoreLabel": "Тип"
+  },
+  "ads": {
+    "label": "Реклама",
+    "banner": "Рекламная область",
+    "closeIn": "сек. до закрытия",
+    "close": "✕ Закрыть"
+  },
+  "valentine": {
+    "introBadge": "💝 Проверьте до Дня святого Валентина"
   }
 }
