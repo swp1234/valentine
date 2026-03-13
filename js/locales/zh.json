@@ -122,5 +122,12 @@
   },
   "valentine": {
     "introBadge": "💝 情人节前快来确认"
+  },
+  "related": {
+    "title": "探索更多",
+    "nameMatch": "姓名配对",
+    "loveFrequency": "爱情频率",
+    "zodiacMatch": "星座配对",
+    "loveLanguage": "爱的语言"
   }
 }

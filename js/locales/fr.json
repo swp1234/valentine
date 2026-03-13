@@ -122,5 +122,12 @@
   },
   "valentine": {
     "introBadge": "💝 Vérifiez avant la Saint-Valentin"
+  },
+  "related": {
+    "title": "À découvrir",
+    "nameMatch": "Compatibilité des prénoms",
+    "loveFrequency": "Fréquence d amour",
+    "zodiacMatch": "Compatibilité zodiacale",
+    "loveLanguage": "Langage amoureux"
   }
 }

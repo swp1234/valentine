@@ -122,5 +122,12 @@
   },
   "valentine": {
     "introBadge": "💝 वेलेंटाइन डे से पहले जांचें"
+  },
+  "related": {
+    "title": "और खोजें",
+    "nameMatch": "नाम मिलान",
+    "loveFrequency": "प्रेम आवृत्ति",
+    "zodiacMatch": "राशि मिलान",
+    "loveLanguage": "प्रेम भाषा"
   }
 }

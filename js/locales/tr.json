@@ -122,5 +122,12 @@
   },
   "valentine": {
     "introBadge": "💝 Sevgililer Günü'nden önce kontrol edin"
+  },
+  "related": {
+    "title": "Daha fazla keşfet",
+    "nameMatch": "İsim uyumu",
+    "loveFrequency": "Aşk frekansı",
+    "zodiacMatch": "Burç uyumu",
+    "loveLanguage": "Aşk dili"
   }
 }

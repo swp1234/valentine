@@ -122,5 +122,12 @@
   },
   "valentine": {
     "introBadge": "💝 D-4! 발렌타인 전에 확인하세요"
+  },
+  "related": {
+    "title": "더 많은 콘텐츠",
+    "nameMatch": "이름 궁합",
+    "loveFrequency": "사랑 주파수",
+    "zodiacMatch": "별자리 궁합",
+    "loveLanguage": "사랑의 언어"
   }
 }

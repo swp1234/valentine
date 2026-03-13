@@ -122,5 +122,12 @@
   },
   "valentine": {
     "introBadge": "💝 Check Before Valentine's Day"
+  },
+  "related": {
+    "title": "More to Explore",
+    "nameMatch": "Name Match",
+    "loveFrequency": "Love Frequency",
+    "zodiacMatch": "Zodiac Match",
+    "loveLanguage": "Love Language"
   }
 }

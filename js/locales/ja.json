@@ -122,5 +122,12 @@
   },
   "valentine": {
     "introBadge": "💝 バレンタイン前に確認しよう"
+  },
+  "related": {
+    "title": "もっと楽しむ",
+    "nameMatch": "名前相性",
+    "loveFrequency": "ラブ周波数",
+    "zodiacMatch": "星座相性",
+    "loveLanguage": "愛の言語"
   }
 }

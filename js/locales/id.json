@@ -122,5 +122,12 @@
   },
   "valentine": {
     "introBadge": "💝 Cek sebelum Hari Valentine"
+  },
+  "related": {
+    "title": "Jelajahi lainnya",
+    "nameMatch": "Kecocokan nama",
+    "loveFrequency": "Frekuensi cinta",
+    "zodiacMatch": "Kecocokan zodiak",
+    "loveLanguage": "Bahasa cinta"
   }
 }
