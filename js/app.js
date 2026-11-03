@@ -79,6 +79,38 @@ if (document.readyState === 'loading') {
 
         // Floating hearts
         createFloatingHearts();
+
+        // Funnel tracking
+        initRelatedFunnels();
+    }
+
+    function initRelatedFunnels() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const lang = urlParams.get('lang') || (window.i18n ? window.i18n.currentLang : 'ko') || 'ko';
+        const base = (window.location.origin && window.location.origin !== 'null') ? window.location.origin : 'https://dopabrain.com';
+        document.querySelectorAll('.related-grid a').forEach(link => {
+            const href = link.getAttribute('href');
+            if (!href || href.startsWith('http') || href.startsWith('#')) return;
+            try {
+                const url = new URL(href, base);
+                url.searchParams.set('lang', lang);
+                if (!url.searchParams.has('source')) url.searchParams.set('source', 'valentine_result');
+                link.setAttribute('href', url.pathname + url.search);
+            } catch(e) {}
+            if (!link.dataset.trackedCta) {
+                link.dataset.trackedCta = 'true';
+                link.addEventListener('click', () => {
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'content_cta_click', {
+                            cta_surface: 'valentine_related',
+                            destination: link.getAttribute('href'),
+                            source: 'valentine',
+                            lang: lang
+                        });
+                    }
+                });
+            }
+        });
     }
 
     function createFloatingHearts() {
@@ -506,29 +538,9 @@ if (document.readyState === 'loading') {
         requestAnimationFrame(update);
     }
 
-    // Premium
+    // Premium (광고 강제 잠금 해제 금지 - 즉시 심층 분석 표시)
     function showPremium() {
-        const overlay = document.getElementById('ad-overlay');
-        overlay.classList.remove('hidden');
-        let countdown = 5;
-        const countEl = document.getElementById('ad-countdown');
-        const closeBtn = document.getElementById('btn-close-ad');
-        countEl.textContent = countdown;
-        closeBtn.classList.add('hidden');
-
-        const timer = setInterval(() => {
-            countdown--;
-            countEl.textContent = countdown;
-            if (countdown <= 0) {
-                clearInterval(timer);
-                closeBtn.classList.remove('hidden');
-            }
-        }, 1000);
-
-        closeBtn.onclick = () => {
-            overlay.classList.add('hidden');
-            showPremiumContent();
-        };
+        showPremiumContent();
     }
 
     function showPremiumContent() {

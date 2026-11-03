@@ -168,7 +168,6 @@
     <div class="app-container" id="main-content">
         <!-- === INTRO === -->
         <div class="screen intro-screen active" id="intro-screen">
-            <div class="ad-banner ad-top"><span class="ad-placeholder">AD</span></div>
             <div class="intro-content">
                 <div class="intro-icon">💕</div>
                 <h1 data-i18n="intro.title">밸런타인<br>궁합 테스트</h1>
@@ -309,7 +308,15 @@
                 <button class="btn-retry" id="btn-retry" data-i18n="result.retryButton">🔄 다시 하기</button>
             </div>
 
-            <div class="ad-banner ad-bottom"><span class="ad-placeholder">AD</span></div>
+            <div class="related-tests" style="max-width:420px;margin:20px auto;padding-top:20px;border-top:1px solid rgba(255,255,255,0.1);">
+                <h3 data-i18n="related.title" style="font-size:16px;color:#a0a0b8;margin-bottom:12px;text-align:center;">More to Explore</h3>
+                <div class="related-grid" id="related-grid" style="display:grid;grid-template-columns:repeat(2, minmax(0, 1fr));gap:10px;">
+                    <a href="/attachment-style/?lang=ko&amp;start=1&amp;source=valentine_result" data-base-href="/attachment-style/" class="related-card" style="display:flex;flex-direction:column;align-items:center;gap:6px;padding:14px 8px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;text-decoration:none;color:#fff;min-height:44px;min-width:44px;box-sizing:border-box;"><span style="font-size:28px;">💖</span><span data-i18n="related.attachmentStyle" style="font-size:12px;font-weight:600;color:#a0a0b8;text-align:center;">Attachment Style</span></a>
+                    <a href="/toxic-trait/?lang=ko&amp;start=1&amp;source=valentine_result" data-base-href="/toxic-trait/" class="related-card" style="display:flex;flex-direction:column;align-items:center;gap:6px;padding:14px 8px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;text-decoration:none;color:#fff;min-height:44px;min-width:44px;box-sizing:border-box;"><span style="font-size:28px;">🎭</span><span data-i18n="related.toxicTrait" style="font-size:12px;font-weight:600;color:#a0a0b8;text-align:center;">Toxic Trait</span></a>
+                    <a href="/future-self/?lang=ko&amp;start=1&amp;source=valentine_result" data-base-href="/future-self/" class="related-card" style="display:flex;flex-direction:column;align-items:center;gap:6px;padding:14px 8px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;text-decoration:none;color:#fff;min-height:44px;min-width:44px;box-sizing:border-box;"><span style="font-size:28px;">⏳</span><span data-i18n="related.futureSelf" style="font-size:12px;font-weight:600;color:#a0a0b8;text-align:center;">Future Self</span></a>
+                    <a href="/stress-check/?lang=ko&amp;start=1&amp;source=valentine_result" data-base-href="/stress-check/" class="related-card" style="display:flex;flex-direction:column;align-items:center;gap:6px;padding:14px 8px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;text-decoration:none;color:#fff;min-height:44px;min-width:44px;box-sizing:border-box;"><span style="font-size:28px;">⚡</span><span data-i18n="related.stressCheck" style="font-size:12px;font-weight:600;color:#a0a0b8;text-align:center;">Stress Check</span></a>
+                </div>
+            </div>
 
             <!-- DopaBrain 홈 링크 -->
             <footer class="game-footer">
@@ -318,16 +325,6 @@
                     DopaBrain 홈
                 </a>
             </footer>
-        </div>
-
-        <!-- AD OVERLAY -->
-        <div class="overlay ad-overlay hidden" id="ad-overlay">
-            <div class="ad-modal">
-                <p class="ad-label" data-i18n="ads.label">광고</p>
-                <div class="ad-placeholder-lg" data-i18n="ads.banner">광고 영역</div>
-                <div class="ad-timer"><span id="ad-countdown">5</span><span data-i18n="ads.closeIn">초 후 닫기</span></div>
-                <button class="btn-close-ad hidden" id="btn-close-ad" data-i18n="ads.close">✕ 닫기</button>
-            </div>
         </div>
 
         <!-- Hidden canvas -->
