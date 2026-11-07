@@ -121,7 +121,7 @@
     "close": "✕ Kapat"
   },
   "valentine": {
-    "introBadge": "💝 Sevgililer Günü'nden önce kontrol edin"
+    "introBadge": "💝 Romantik Sevgililer Günü Çift Uyumu Analizi"
   },
   "related": {
     "title": "Daha fazla keşfet",
@@ -129,5 +129,16 @@
     "loveFrequency": "Aşk frekansı",
     "zodiacMatch": "Burç uyumu",
     "loveLanguage": "Aşk dili"
+  },
+  "faq": {
+    "title": "Sıkça Sorulan Sorular (FAQ)",
+    "q1": "İsim harfleri veya burçlar ilişkideki uyumu bilimsel olarak belirler mi?",
+    "a1": "Hayır. İsim numerolojisi ve burçlar kültürel eğlence unsurlarıdır. İlişki psikolojisi araştırmaları, asıl uyumun karşılıklı saygı, empati ve anlaşmazlıkları onarma becerisiyle şekillendiğini gösterir.",
+    "q2": "Bu Sevgililer Günü testini partnerimle nasıl verimli kullanabilirim?",
+    "a2": "Yüzdelik puana takılmak yerine, soruları birbirinizin sevgi dillerini ve ilişkiden beklentilerini konuşmak için tatlı bir sohbet başlatıcı olarak değerlendirin.",
+    "q3": "Sağlıklı bir ilişkiyi açıklayan temel psikolojik modeller nelerdir?",
+    "a3": "Sternberg'in Üçgen Sevgi Kuramı (yakınlık, tutku, bağlılık) ve 5 Sevgi Dili modeli, partnerlerin birbirini daha derinlemesine anlamasını sağlayan güçlü araçlardır.",
+    "q4": "Girdiğimiz isimler veya doğum günleri sunucularda saklanıyor mu?",
+    "a4": "Hayır. Bütün hesaplamalar tamamen cihazınızdaki yerel tarayıcıda yürütülür; hiçbir veri harici bir sunucuya iletilmez."
   }
 }

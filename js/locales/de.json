@@ -121,7 +121,7 @@
     "close": "✕ Schließen"
   },
   "valentine": {
-    "introBadge": "💝 Vor dem Valentinstag prüfen"
+    "introBadge": "💝 Romantischer Valentins-Kompatibilitätstest"
   },
   "related": {
     "title": "Mehr entdecken",
@@ -129,5 +129,16 @@
     "loveFrequency": "Liebesfrequenz",
     "zodiacMatch": "Sternzeichen-Match",
     "loveLanguage": "Liebessprache"
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen (FAQ)",
+    "q1": "Bestimmen Namenszüge oder Sternzeichen wissenschaftlich die Liebe?",
+    "a1": "Nein. Solche Vergleiche beruhen auf folkloristischer Unterhaltung. Beziehungswissenschaftliche Erkenntnisse (z. B. Gottman-Institut) belegen, dass Wertschätzung, offene Kommunikation und emotionale Zuwendung für dauerhaftes Glück entscheidend sind.",
+    "q2": "Wie können Paare dieses Quiz konstruktiv nutzen?",
+    "a2": "Nutzen Sie das Ergebnis nicht als starres Urteil, sondern als spielerischen Anlass, um über Kommunikationsstile, Zuneigung und gemeinsame Werte ins Gespräch zu kommen.",
+    "q3": "Welche psychologischen Modelle beschreiben tragfähige Beziehungen?",
+    "a3": "Sternbergs Dreieckstheorie der Liebe (Intimität, Leidenschaft, Verbindlichkeit) sowie die '5 Sprachen der Liebe' bieten verlässliche Orientierung für ein achtsames Miteinander.",
+    "q4": "Werden eingegebene Namen oder Geburtstage gespeichert?",
+    "a4": "Nein. Sämtliche Berechnungen laufen ausschließlich lokal in Ihrem Browser ab. Keine persönlichen Angaben verlassen Ihr Gerät."
   }
 }

@@ -121,7 +121,7 @@
     "close": "✕ Cerrar"
   },
   "valentine": {
-    "introBadge": "💝 Comprueba antes de San Valentín"
+    "introBadge": "💝 Análisis de Compatibilidad Romántica de San Valentín"
   },
   "related": {
     "title": "Explora más",
@@ -129,5 +129,16 @@
     "loveFrequency": "Frecuencia del amor",
     "zodiacMatch": "Compatibilidad zodiacal",
     "loveLanguage": "Lenguaje del amor"
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes (FAQ)",
+    "q1": "¿Determinan científicamente el amor los nombres o los signos zodiacales?",
+    "a1": "No. La numerología de nombres y la astrología son tradiciones culturales lúdicas. Los estudios psicológicos (como los del Instituto Gottman) demuestran que la solidez de una pareja depende de la empatía, el respeto y la reparación de desacuerdos.",
+    "q2": "¿Cómo pueden las parejas aprovechar constructivamente este test?",
+    "a2": "En lugar de tomar el porcentaje como un veredicto definitivo, usen las preguntas como disparadores amables para dialogar sobre sus lenguajes de afecto y expectativas mutuas.",
+    "q3": "¿Qué modelos psicológicos explican la compatibilidad duradera?",
+    "a3": "La Teoría Triangular del Amor de Sternberg (intimidad, pasión y compromiso) y los 5 Lenguajes del Amor de Gary Chapman brindan marcos útiles para comprender la salud vincular.",
+    "q4": "¿Se guardan nuestros nombres o fechas de nacimiento en servidores externos?",
+    "a4": "No. Todo el procesamiento se realiza localmente en el navegador. Ningún dato personal es recopilado ni transferido a servidores externos."
   }
 }

@@ -121,7 +121,7 @@
     "close": "✕ Fermer"
   },
   "valentine": {
-    "introBadge": "💝 Vérifiez avant la Saint-Valentin"
+    "introBadge": "💝 Quiz de Compatibilité Romantique de Saint-Valentin"
   },
   "related": {
     "title": "À découvrir",
@@ -129,5 +129,16 @@
     "loveFrequency": "Fréquence d amour",
     "zodiacMatch": "Compatibilité zodiacale",
     "loveLanguage": "Langage amoureux"
+  },
+  "faq": {
+    "title": "Foire Aux Questions (FAQ)",
+    "q1": "Le tracé des prénoms ou les signes astrologiques prédisent-ils l'amour ?",
+    "a1": "Non. Ces analogies relèvent du folklore récréatif. Les recherches en psychologie du couple (notamment les travaux de John Gottman) confirment que la réussite amoureuse repose sur la bienveillance, l'écoute et la capacité de réparation relationnelle.",
+    "q2": "Comment utiliser utilement ce test en couple ?",
+    "a2": "Plutôt que de figer un score, prenez les questions comme des amorces bienveillantes pour échanger sur vos manières de manifester l'affection et vos attentes respectives.",
+    "q3": "Quelles théories psychologiques éclairent l'harmonie amoureuse ?",
+    "a3": "La théorie triangulaire de l'amour de Sternberg (intimité, passion, engagement) et les cinq langages de l'amour aident à décrypter les dynamiques relationnelles avec clarté.",
+    "q4": "Nos noms et dates de naissance sont-ils stockés sur un serveur ?",
+    "a4": "Non. Tous les calculs s'opèrent intégralement dans votre navigateur local. Aucune donnée confidentielle n'est transmise à l'extérieur."
   }
 }

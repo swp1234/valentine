@@ -121,7 +121,7 @@
     "close": "✕ Tutup"
   },
   "valentine": {
-    "introBadge": "💝 Cek sebelum Hari Valentine"
+    "introBadge": "💝 Analisis Kecocokan Pasangan Romantis Valentine"
   },
   "related": {
     "title": "Jelajahi lainnya",
@@ -129,5 +129,16 @@
     "loveFrequency": "Frekuensi cinta",
     "zodiacMatch": "Kecocokan zodiak",
     "loveLanguage": "Bahasa cinta"
+  },
+  "faq": {
+    "title": "Pertanyaan yang Sering Diajukan (FAQ)",
+    "q1": "Apakah kecocokan nama atau zodiak menentukan cinta secara ilmiah?",
+    "a1": "Tidak. Perhitungan nama dan zodiak adalah folklor hiburan budaya. Riset psikologi hubungan menunjukkan keharmonisan sejati ditentukan oleh komunikasi empati, rasa saling menghargai, dan komitmen bersama.",
+    "q2": "Bagaimana cara memanfaatkan kuis ini secara bermakna bersama pasangan?",
+    "a2": "Jadikan pertanyaan kuis sebagai bahan obrolan hangat untuk memahami bahasa kasih masing-masing dan menyelaraskan harapan tanpa tekanan.",
+    "q3": "Teori psikologi apa yang menjelaskan hubungan yang langgeng?",
+    "a3": "Teori Segitiga Cinta Sternberg (keintiman, gairah, komitmen) serta 5 Bahasa Kasih Chapman memberikan pemahaman berharga tentang bagaimana pasangan merawat ikatan emosional.",
+    "q4": "Apakah nama dan tanggal lahir yang dimasukkan disimpan di server?",
+    "a4": "Tidak sama sekali. Semua pemrosesan berlangsung secara lokal di peramban Anda dengan jaminan privasi penuh."
   }
 }

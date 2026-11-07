@@ -121,7 +121,7 @@
     "close": "✕ Fechar"
   },
   "valentine": {
-    "introBadge": "💝 Verifique antes do Dia dos Namorados"
+    "introBadge": "💝 Análise de Compatibilidade Romântica de São Valentim"
   },
   "related": {
     "title": "Explore mais",
@@ -129,5 +129,16 @@
     "loveFrequency": "Frequência do amor",
     "zodiacMatch": "Compatibilidade zodiacal",
     "loveLanguage": "Linguagem do amor"
+  },
+  "faq": {
+    "title": "Perguntas Frequentes (FAQ)",
+    "q1": "Nomes ou signos astrológicos definem cientificamente o amor?",
+    "a1": "Não. A numerologia de nomes e os signos são manifestações culturais e lúdicas. A psicologia relacional (como os estudos do Instituto Gottman) evidencia que a harmonia depende de escuta ativa, empatia e manejo respeitoso dos conflitos.",
+    "q2": "Como o casal pode aproveitar este quiz de maneira construtiva?",
+    "a2": "Mais do que focar em uma porcentagem, aproveite os tópicos para debater abertamente sobre preferências afetivas, limites e objetivos compartilhados.",
+    "q3": "Quais teorias psicológicas explicam uma compatibilidade sólida?",
+    "a3": "A Teoria Triangular do Amor de Sternberg (intimidade, paixão, compromisso) e as 5 Linguagens do Amor auxiliam a reconhecer como cada parceiro expressa afeto.",
+    "q4": "Os nomes, datas de aniversário ou respostas são salvos em servidores?",
+    "a4": "Não. Todos os dados são processados estritamente na memória local do seu navegador, sem retenção nem compartilhamento com servidores externos."
   }
 }

@@ -8,6 +8,7 @@
 
     <!-- SEO -->
     <title data-i18n="app.title">Valentine Compatibility Test - Free Love Quiz | DopaBrain</title>
+    <meta name="dateModified" content="2026-11-07">
     <meta name="description" data-i18n="app.description" content="D-4! 2026 발렌타인데이 전에 우리 궁합을 확인하세요! 이름+생일+5가지 질문으로 알아보는 완벽 궁합 분석. 이름 획수 궁합, 별자리 궁합, 사랑 유형까지. 결과 이미지 저장 & 공유.">
     <meta name="keywords" content="발렌타인,궁합테스트,2026 발렌타인,이름궁합,커플궁합,2월14일,심리테스트,커플테스트,사랑테스트,연애궁합">
     <link rel="canonical" href="https://dopabrain.com/valentine/">
@@ -82,7 +83,7 @@
     "url": "https://dopabrain.com/portal/"
   },
   "datePublished": "2024-12-01",
-  "dateModified": "2026-10-29",
+  "dateModified": "2026-11-07",
   "image": "https://dopabrain.com/valentine/icon-512.svg",
   "publisher": {
     "@type": "Organization",
@@ -92,7 +93,47 @@
 }
 </script>
 
-    <!-- FAQPage Schema -->
+        <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Do name strokes or zodiac signs scientifically determine romantic compatibility?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. Name stroke numerology and astrological pairing are traditional cultural folklore, not predictive science. Psychological relationship studies (e.g., Gottman Institute) show compatibility is determined by mutual responsiveness, shared values, and conflict repair skills."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How can couples use this Valentine test constructively?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Rather than treating compatibility percentages as literal verdicts, use the quiz questions as playful, low-pressure conversation starters to explore each other's communication habits, affection styles, and relationship expectations."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What psychological concepts help explain lasting compatibility?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sternberg's Triangular Theory of Love (intimacy, passion, commitment) and Gary Chapman's 5 Love Languages provide evidence-grounded frameworks for understanding how partners connect and sustain emotional closeness over time."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Are our names, birthdays, or answers stored on any server?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. All compatibility algorithms, stroke calculations, and quiz responses run 100% locally in your browser. No names, birthdays, or test results are transmitted to external servers or recorded in telemetry."
+                }
+            }
+        ]
+    }
+    </script>
     
     <!-- BreadcrumbList Schema -->
     <script type="application/ld+json">
@@ -179,11 +220,41 @@
                     <span data-i18n="intro.meta3">💌 사랑 유형</span>
                 </div>
                 <div class="intro-badges">
-                    <span class="intro-badge" data-i18n="valentine.introBadge" style="background: linear-gradient(135deg, #ff1744, #ff6e40); font-weight: bold;">💝 D-4! 발렌타인 전에 확인하세요</span>
+                    <span class="intro-badge" data-i18n="valentine.introBadge" style="background: linear-gradient(135deg, #ff1744, #ff6e40); font-weight: bold;">💝 발렌타인 커플 궁합 분석</span>
                     <span class="intro-badge">⏱️ 1분이면 완료!</span>
                     <span class="intro-badge" id="intro-count"></span>
                 </div>
                 <button class="btn-start" id="btn-start" data-i18n="intro.button">테스트 시작하기</button>
+
+                <section class="faq-section collapsible-section" id="faq-section" aria-labelledby="faq-title">
+                    <h2 id="faq-title" class="faq-heading" data-i18n="faq.title">Frequently Asked Questions</h2>
+                    <div class="faq-list">
+                        <details class="faq-item">
+                            <summary><h3 data-i18n="faq.q1">Do name strokes or zodiac signs scientifically determine romantic compatibility?</h3></summary>
+                            <div class="faq-answer">
+                                <p data-i18n="faq.a1">No. Name stroke numerology and astrological pairing are traditional cultural folklore, not predictive science. Psychological relationship studies (e.g., Gottman Institute) show compatibility is determined by mutual responsiveness, shared values, and conflict repair skills.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary><h3 data-i18n="faq.q2">How can couples use this Valentine test constructively?</h3></summary>
+                            <div class="faq-answer">
+                                <p data-i18n="faq.a2">Rather than treating compatibility percentages as literal verdicts, use the quiz questions as playful, low-pressure conversation starters to explore each other's communication habits, affection styles, and relationship expectations.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary><h3 data-i18n="faq.q3">What psychological concepts help explain lasting compatibility?</h3></summary>
+                            <div class="faq-answer">
+                                <p data-i18n="faq.a3">Sternberg's Triangular Theory of Love (intimacy, passion, commitment) and Gary Chapman's 5 Love Languages provide evidence-grounded frameworks for understanding how partners connect and sustain emotional closeness over time.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary><h3 data-i18n="faq.q4">Are our names, birthdays, or answers stored on any server?</h3></summary>
+                            <div class="faq-answer">
+                                <p data-i18n="faq.a4">No. All compatibility algorithms, stroke calculations, and quiz responses run 100% locally in your browser. No names, birthdays, or test results are transmitted to external servers or recorded in telemetry.</p>
+                            </div>
+                        </details>
+                    </div>
+                </section>
             </div>
         </div>
 

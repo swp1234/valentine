@@ -121,7 +121,7 @@
     "close": "✕ Close"
   },
   "valentine": {
-    "introBadge": "💝 Check Before Valentine's Day"
+    "introBadge": "💝 Romantic Couple Compatibility Quiz"
   },
   "related": {
     "title": "More to Explore",
@@ -129,5 +129,16 @@
     "loveFrequency": "Love Frequency",
     "zodiacMatch": "Zodiac Match",
     "loveLanguage": "Love Language"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "Do name strokes or zodiac signs scientifically determine romantic compatibility?",
+    "a1": "No. Name stroke numerology and astrological pairing are traditional cultural folklore, not predictive science. Psychological relationship studies (e.g., Gottman Institute) show compatibility is determined by mutual responsiveness, shared values, and conflict repair skills.",
+    "q2": "How can couples use this Valentine test constructively?",
+    "a2": "Rather than treating compatibility percentages as literal verdicts, use the quiz questions as playful, low-pressure conversation starters to explore each other's communication habits, affection styles, and relationship expectations.",
+    "q3": "What psychological concepts help explain lasting compatibility?",
+    "a3": "Sternberg's Triangular Theory of Love (intimacy, passion, commitment) and Gary Chapman's 5 Love Languages provide evidence-grounded frameworks for understanding how partners connect and sustain emotional closeness over time.",
+    "q4": "Are our names, birthdays, or answers stored on any server?",
+    "a4": "No. All compatibility algorithms, stroke calculations, and quiz responses run 100% locally in your browser. No names, birthdays, or test results are transmitted to external servers or recorded in telemetry."
   }
 }
