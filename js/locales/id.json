@@ -1,7 +1,8 @@
 {
   "app": {
     "title": "Tes Kompatibilitas Valentine - Berapa Kompatibilitas Kami? 💕",
-    "description": "Temukan kompatibilitas Anda dengan nama + tanggal lahir + 5 pertanyaan! Analisis kompatibilitas nama, tanda zodiak, dan jenis cinta. Simpan dan bagikan hasil."
+    "description": "Temukan kompatibilitas Anda dengan nama + tanggal lahir + 5 pertanyaan! Analisis kompatibilitas nama, tanda zodiak, dan jenis cinta. Simpan dan bagikan hasil.",
+    "loading": "Memuat..."
   },
   "intro": {
     "title": "Tes Kompatibilitas\nValentine",
@@ -40,7 +41,7 @@
   },
   "result": {
     "compatibilityScore": "Kompatibilitas",
-    "deepAnalysis": "Lihat Analisis Kompatibilitas Mendalam AI",
+    "deepAnalysis": "Lihat Analisis Kecocokan Mendalam",
     "shareButton": "📤 Bagikan Hasil",
     "saveImageButton": "📷 Simpan Gambar",
     "retryButton": "🔄 Coba Lagi",
@@ -125,10 +126,11 @@
   },
   "related": {
     "title": "Jelajahi lainnya",
-    "nameMatch": "Kecocokan nama",
-    "loveFrequency": "Frekuensi cinta",
+    "nameMatch": "Cocok Nama",
+    "loveFrequency": "Frekuensi Cinta",
     "zodiacMatch": "Kecocokan zodiak",
-    "loveLanguage": "Bahasa cinta"
+    "loveLanguage": "Bahasa Cinta",
+    "mbtiLove": "Cinta MBTI"
   },
   "faq": {
     "title": "Pertanyaan yang Sering Diajukan (FAQ)",
@@ -140,5 +142,22 @@
     "a3": "Teori Segitiga Cinta Sternberg (keintiman, gairah, komitmen) serta 5 Bahasa Kasih Chapman memberikan pemahaman berharga tentang bagaimana pasangan merawat ikatan emosional.",
     "q4": "Apakah nama dan tanggal lahir yang dimasukkan disimpan di server?",
     "a4": "Tidak sama sekali. Semua pemrosesan berlangsung secara lokal di peramban Anda dengan jaminan privasi penuh."
+  },
+  "accessibility": {
+    "skipMain": "Langsung ke konten utama"
+  },
+  "game": {
+    "back": "Beranda DopaBrain"
+  },
+  "curated": {
+    "badge": "BUKU PILIHAN",
+    "title": "Rekomendasi Buku Psikologi Hubungan",
+    "subtitle": "Bacaan berbasis riset tentang gaya keterikatan dan komunikasi pasangan",
+    "book1Title": "The Seven Principles for Making Marriage Work",
+    "book1Author": "John Gottman & Nan Silver",
+    "book1Desc": "Kebiasaan teruji untuk membangun kepercayaan dan keharmonisan jangka panjang.",
+    "book2Title": "Attached: The New Science of Adult Attachment",
+    "book2Author": "Amir Levine & Rachel Heller",
+    "book2Desc": "Panduan praktis memahami pola kelekatan diri dan pasangan."
   }
 }

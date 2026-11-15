@@ -1,7 +1,8 @@
 {
   "app": {
     "title": "Prueba de Compatibilidad de San Valentín - ¿Cuál es Nuestro Porcentaje de Compatibilidad? 💕",
-    "description": "¡Encuentra tu compatibilidad con nombre + cumpleaños + 5 preguntas! Analiza compatibilidad de nombres, signos zodiacales y tipos de amor. Guarda y comparte resultados."
+    "description": "¡Encuentra tu compatibilidad con nombre + cumpleaños + 5 preguntas! Analiza compatibilidad de nombres, signos zodiacales y tipos de amor. Guarda y comparte resultados.",
+    "loading": "Cargando..."
   },
   "intro": {
     "title": "Prueba de Compatibilidad\nde San Valentín",
@@ -40,7 +41,7 @@
   },
   "result": {
     "compatibilityScore": "Compatibilidad",
-    "deepAnalysis": "Ver Análisis Profundo de Compatibilidad de IA",
+    "deepAnalysis": "Ver análisis profundo de compatibilidad",
     "shareButton": "📤 Compartir Resultado",
     "saveImageButton": "📷 Guardar Imagen",
     "retryButton": "🔄 Reintentar",
@@ -125,10 +126,11 @@
   },
   "related": {
     "title": "Explora más",
-    "nameMatch": "Compatibilidad de nombres",
-    "loveFrequency": "Frecuencia del amor",
+    "nameMatch": "Nombres",
+    "loveFrequency": "Frecuencia",
     "zodiacMatch": "Compatibilidad zodiacal",
-    "loveLanguage": "Lenguaje del amor"
+    "loveLanguage": "Lenguaje del Amor",
+    "mbtiLove": "MBTI Amor"
   },
   "faq": {
     "title": "Preguntas Frecuentes (FAQ)",
@@ -140,5 +142,22 @@
     "a3": "La Teoría Triangular del Amor de Sternberg (intimidad, pasión y compromiso) y los 5 Lenguajes del Amor de Gary Chapman brindan marcos útiles para comprender la salud vincular.",
     "q4": "¿Se guardan nuestros nombres o fechas de nacimiento en servidores externos?",
     "a4": "No. Todo el procesamiento se realiza localmente en el navegador. Ningún dato personal es recopilado ni transferido a servidores externos."
+  },
+  "accessibility": {
+    "skipMain": "Ir al contenido principal"
+  },
+  "game": {
+    "back": "Inicio de DopaBrain"
+  },
+  "curated": {
+    "badge": "LECTURAS",
+    "title": "Libros recomendados de psicología de pareja",
+    "subtitle": "Obras clave sobre apego adulto, diálogo emocional y vínculos sólidos",
+    "book1Title": "Siete reglas de oro para vivir en pareja",
+    "book1Author": "John Gottman y Nan Silver",
+    "book1Desc": "Hábitos respaldados por estudios para fortalecer la confianza y reparar desacuerdos.",
+    "book2Title": "Maneras de amar (Attached)",
+    "book2Author": "Amir Levine y Rachel Heller",
+    "book2Desc": "Guía práctica para comprender el apego ansioso, evitativo y seguro."
   }
 }

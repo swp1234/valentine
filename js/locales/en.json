@@ -1,7 +1,8 @@
 {
   "app": {
     "title": "Valentine Compatibility Test - What's Our Compatibility %? 💕",
-    "description": "Find your compatibility with name + birthday + 5 questions! Analyze name compatibility, zodiac signs, and love types. Save and share results."
+    "description": "Find your compatibility with name + birthday + 5 questions! Analyze name compatibility, zodiac signs, and love types. Save and share results.",
+    "loading": "Loading..."
   },
   "intro": {
     "title": "Valentine\nCompatibility Test",
@@ -40,7 +41,7 @@
   },
   "result": {
     "compatibilityScore": "Compatibility",
-    "deepAnalysis": "View AI Deep Compatibility Analysis",
+    "deepAnalysis": "View Deep Compatibility Analysis",
     "shareButton": "📤 Share Result",
     "saveImageButton": "📷 Save Image",
     "retryButton": "🔄 Retry",
@@ -128,7 +129,8 @@
     "nameMatch": "Name Match",
     "loveFrequency": "Love Frequency",
     "zodiacMatch": "Zodiac Match",
-    "loveLanguage": "Love Language"
+    "loveLanguage": "Love Language",
+    "mbtiLove": "MBTI Love"
   },
   "faq": {
     "title": "Frequently Asked Questions",
@@ -140,5 +142,22 @@
     "a3": "Sternberg's Triangular Theory of Love (intimacy, passion, commitment) and Gary Chapman's 5 Love Languages provide evidence-grounded frameworks for understanding how partners connect and sustain emotional closeness over time.",
     "q4": "Are our names, birthdays, or answers stored on any server?",
     "a4": "No. All compatibility algorithms, stroke calculations, and quiz responses run 100% locally in your browser. No names, birthdays, or test results are transmitted to external servers or recorded in telemetry."
+  },
+  "accessibility": {
+    "skipMain": "Skip to main content"
+  },
+  "game": {
+    "back": "DopaBrain Home"
+  },
+  "curated": {
+    "badge": "BOOK PICK",
+    "title": "Recommended Relationship Psychology Books",
+    "subtitle": "Research-backed reads on attachment styles, empathy, and lasting connection",
+    "book1Title": "The Seven Principles for Making Marriage Work",
+    "book1Author": "John Gottman & Nan Silver",
+    "book1Desc": "Evidence-based relationship habits for deeper trust, dialogue, and repair.",
+    "book2Title": "Attached: The New Science of Adult Attachment",
+    "book2Author": "Amir Levine & Rachel Heller",
+    "book2Desc": "Practical guide to understanding anxious, avoidant, and secure partner dynamics."
   }
 }

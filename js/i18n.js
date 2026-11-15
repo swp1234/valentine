@@ -3,11 +3,16 @@ class I18n {
         this.translations = {};
         this.supportedLanguages = ['ko', 'en', 'ja', 'es', 'pt', 'zh', 'id', 'tr', 'de', 'fr', 'hi', 'ru'];
         this.currentLang = this.detectLanguage();
+        document.documentElement.lang = this.currentLang;
     }
     detectLanguage() {
+        try {
+            const urlLang = new URLSearchParams(window.location.search).get('lang');
+            if (urlLang && this.supportedLanguages.includes(urlLang)) return urlLang;
+        } catch (e) {}
         const savedLang = localStorage.getItem('app_language');
         if (savedLang && this.supportedLanguages.includes(savedLang)) return savedLang;
-        const browserLang = (navigator.language || navigator.userLanguage).split('-')[0];
+        const browserLang = (navigator.language || navigator.userLanguage || 'en').split('-')[0];
         if (this.supportedLanguages.includes(browserLang)) return browserLang;
         return 'en';
     }
@@ -17,16 +22,27 @@ class I18n {
             if (!response.ok) throw new Error('Not found');
             this.translations[lang] = await response.json();
             return true;
-        } catch (e) { if (lang !== 'en') return this.loadTranslations('en'); return false; }
+        } catch (e) {
+            if (lang !== 'en') return this.loadTranslations('en');
+            return false;
+        }
     }
     t(key) {
         const keys = key.split('.');
         let value = this.translations[this.currentLang];
         for (const k of keys) {
             value = value?.[k];
-            if (!value) return key;
+            if (value === undefined || value === null) break;
         }
-        return value;
+        if ((value === undefined || value === null) && this.translations['en']) {
+            let fallback = this.translations['en'];
+            for (const k of keys) {
+                fallback = fallback?.[k];
+                if (fallback === undefined || fallback === null) return key;
+            }
+            return fallback;
+        }
+        return (value !== undefined && value !== null) ? value : key;
     }
     async setLanguage(lang) {
         if (!this.supportedLanguages.includes(lang)) return false;
@@ -38,11 +54,25 @@ class I18n {
         return true;
     }
     updateUI() {
-        document.querySelectorAll('[data-i18n]').forEach(el => { el.textContent = this.t(el.getAttribute('data-i18n')); });
-        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => { el.placeholder = this.t(el.getAttribute('data-i18n-placeholder')); });
-        document.title = this.t('app.title');
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            const val = this.t(key);
+            if (val && val !== key && typeof val === 'string') {
+                el.textContent = val;
+            }
+        });
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+            const key = el.getAttribute('data-i18n-placeholder');
+            const val = this.t(key);
+            if (val && val !== key && typeof val === 'string') {
+                el.placeholder = val;
+            }
+        });
+        const title = this.t('app.title');
+        if (title && title !== 'app.title') document.title = title;
         const meta = document.querySelector('meta[name="description"]');
-        if (meta) meta.content = this.t('app.description');
+        const desc = this.t('app.description');
+        if (meta && desc && desc !== 'app.description') meta.content = desc;
     }
     getCurrentLanguage() { return this.currentLang; }
     getLanguageName(lang) {
@@ -64,3 +94,4 @@ class I18n {
     }
 }
 const i18n = new I18n();
+window.i18n = i18n;

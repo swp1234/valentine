@@ -1,7 +1,8 @@
 {
   "app": {
     "title": "Teste de Compatibilidade Valentine - Qual é Nossa Compatibilidade %? 💕",
-    "description": "Encontre sua compatibilidade com nome + aniversário + 5 questões! Analise compatibilidade de nome, signos do zodíaco e tipos de amor. Salve e compartilhe resultados."
+    "description": "Encontre sua compatibilidade com nome + aniversário + 5 questões! Analise compatibilidade de nome, signos do zodíaco e tipos de amor. Salve e compartilhe resultados.",
+    "loading": "Carregando..."
   },
   "intro": {
     "title": "Teste de Compatibilidade\nValentine",
@@ -40,7 +41,7 @@
   },
   "result": {
     "compatibilityScore": "Compatibilidade",
-    "deepAnalysis": "Ver Análise Profunda de Compatibilidade com IA",
+    "deepAnalysis": "Ver análise profunda de compatibilidade",
     "shareButton": "📤 Compartilhar Resultado",
     "saveImageButton": "📷 Salvar Imagem",
     "retryButton": "🔄 Tentar Novamente",
@@ -125,10 +126,11 @@
   },
   "related": {
     "title": "Explore mais",
-    "nameMatch": "Compatibilidade de nomes",
-    "loveFrequency": "Frequência do amor",
+    "nameMatch": "Nomes",
+    "loveFrequency": "Frequência",
     "zodiacMatch": "Compatibilidade zodiacal",
-    "loveLanguage": "Linguagem do amor"
+    "loveLanguage": "Linguagem do Amor",
+    "mbtiLove": "MBTI Amor"
   },
   "faq": {
     "title": "Perguntas Frequentes (FAQ)",
@@ -140,5 +142,22 @@
     "a3": "A Teoria Triangular do Amor de Sternberg (intimidade, paixão, compromisso) e as 5 Linguagens do Amor auxiliam a reconhecer como cada parceiro expressa afeto.",
     "q4": "Os nomes, datas de aniversário ou respostas são salvos em servidores?",
     "a4": "Não. Todos os dados são processados estritamente na memória local do seu navegador, sem retenção nem compartilhamento com servidores externos."
+  },
+  "accessibility": {
+    "skipMain": "Ir para o conteúdo principal"
+  },
+  "game": {
+    "back": "Início DopaBrain"
+  },
+  "curated": {
+    "badge": "LIVROS",
+    "title": "Livros recomendados sobre psicologia do amor",
+    "subtitle": "Leituras essenciais sobre apego adulto, empatia e comunicação no casal",
+    "book1Title": "Sete princípios para o casamento dar certo",
+    "book1Author": "John Gottman e Nan Silver",
+    "book1Desc": "Práticas baseadas em pesquisa para aprofundar confiança e diálogo.",
+    "book2Title": "Apegados (Attached)",
+    "book2Author": "Amir Levine e Rachel Heller",
+    "book2Desc": "Guia para entender estilos de apego e criar vínculos mais seguros."
   }
 }

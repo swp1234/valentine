@@ -1058,3 +1058,85 @@ button,a[href],input[type="button"],input[type="submit"],[role="button"]{min-wid
     line-height: 1.6;
     color: var(--text-sub);
 }
+
+/* Touch & Funnel & Curated Book Cards */
+.lang-btn,
+.theme-toggle,
+.back-link,
+.btn-start,
+.btn-next,
+.btn-share,
+.btn-save-image,
+.btn-retry,
+.btn-premium,
+.q-option,
+.lang-option {
+    min-height: 44px;
+    min-width: 44px;
+    box-sizing: border-box;
+    touch-action: manipulation;
+}
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px 16px;
+}
+.curated-resources-card {
+    width: 100%;
+    max-width: 440px;
+    margin: 20px auto;
+    padding: 18px 16px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-sizing: border-box;
+    text-align: left;
+}
+.curated-card-header { margin-bottom: 12px; }
+.curated-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: var(--pink);
+    margin-bottom: 4px;
+}
+.curated-card-header h2 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text);
+    margin: 0 0 4px;
+}
+.curated-card-header p {
+    font-size: 12px;
+    color: var(--text-sub);
+    margin: 0;
+    line-height: 1.45;
+}
+.curated-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.curated-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px;
+    min-height: 44px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--text);
+    transition: border-color 0.2s ease, transform 0.15s ease;
+}
+.curated-item:hover { border-color: var(--pink); }
+.curated-icon { font-size: 24px; line-height: 1.2; flex-shrink: 0; }
+.curated-info { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.curated-info strong { font-size: 14px; color: var(--text); }
+.curated-author { font-size: 12px; color: var(--pink-light); font-weight: 600; }
+.curated-desc { font-size: 12px; color: var(--text-sub); line-height: 1.45; }

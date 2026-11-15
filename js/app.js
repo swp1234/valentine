@@ -1,19 +1,20 @@
 
 function preserveLanguageLinks() {
-    var urlLang = new URLSearchParams(window.location.search).get('lang');
-    var currentLang = urlLang || (typeof i18n !== 'undefined' && typeof i18n.getCurrentLanguage === 'function' ? i18n.getCurrentLanguage() : null) || 'ko';
+    var currentLang = (typeof i18n !== 'undefined' && typeof i18n.getCurrentLanguage === 'function' ? i18n.getCurrentLanguage() : null) || new URLSearchParams(window.location.search).get('lang') || 'ko';
     var links = document.querySelectorAll('a[href^="/"], .related-card');
     var base = (window.location.origin && window.location.origin !== 'null') ? window.location.origin : 'https://dopabrain.com';
     links.forEach(function(link) {
-        var href = link.getAttribute('href');
+        var href = link.getAttribute('data-base-href') || link.getAttribute('href');
         if (!href || href.startsWith('http') || href.startsWith('#')) return;
         try {
             var url = new URL(href, base);
             url.searchParams.set('lang', currentLang);
+            if (link.classList.contains('related-card')) url.searchParams.set('source', 'valentine_result');
             link.setAttribute('href', url.pathname + url.search);
         } catch(e) {}
     });
 }
+window.preserveLanguageLinks = preserveLanguageLinks;
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', preserveLanguageLinks);
 } else {
@@ -84,17 +85,20 @@ if (document.readyState === 'loading') {
         initRelatedFunnels();
     }
 
+    function getActiveLang() {
+        return (window.i18n && typeof window.i18n.getCurrentLanguage === 'function' ? window.i18n.getCurrentLanguage() : null) || new URLSearchParams(window.location.search).get('lang') || 'ko';
+    }
+
     function initRelatedFunnels() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const lang = urlParams.get('lang') || (window.i18n ? window.i18n.currentLang : 'ko') || 'ko';
+        const lang = getActiveLang();
         const base = (window.location.origin && window.location.origin !== 'null') ? window.location.origin : 'https://dopabrain.com';
         document.querySelectorAll('.related-grid a').forEach(link => {
-            const href = link.getAttribute('href');
+            const href = link.getAttribute('data-base-href') || link.getAttribute('href');
             if (!href || href.startsWith('http') || href.startsWith('#')) return;
             try {
                 const url = new URL(href, base);
                 url.searchParams.set('lang', lang);
-                if (!url.searchParams.has('source')) url.searchParams.set('source', 'valentine_result');
+                url.searchParams.set('source', 'valentine_result');
                 link.setAttribute('href', url.pathname + url.search);
             } catch(e) {}
             if (!link.dataset.trackedCta) {
@@ -105,13 +109,28 @@ if (document.readyState === 'loading') {
                             cta_surface: 'valentine_related',
                             destination: link.getAttribute('href'),
                             source: 'valentine',
-                            lang: lang
+                            lang: getActiveLang()
                         });
                     }
                 });
             }
         });
+        document.querySelectorAll('#curated-resources-card a.curated-item').forEach(link => {
+            if (link.dataset.trackedCurated) return;
+            link.dataset.trackedCurated = 'true';
+            link.addEventListener('click', () => {
+                if (typeof gtag === 'function') {
+                    gtag('event', 'curated_resource_click', {
+                        app_name: 'valentine',
+                        resource_type: link.dataset.resourceType || 'book',
+                        item_id: link.dataset.itemId || 'book',
+                        lang: getActiveLang()
+                    });
+                }
+            });
+        });
     }
+    window.initRelatedFunnels = initRelatedFunnels;
 
     function createFloatingHearts() {
         const container = document.querySelector('.floating-hearts');
@@ -145,6 +164,13 @@ if (document.readyState === 'loading') {
         currentPerson = 1;
         updateInputUI();
         showScreen('input');
+        if (typeof gtag === 'function') {
+            gtag('event', 'test_start', {
+                app_name: 'valentine',
+                mode: 'couple_quiz',
+                lang: getActiveLang()
+            });
+        }
     }
 
     function updateInputUI() {
@@ -210,7 +236,7 @@ if (document.readyState === 'loading') {
         const who = currentPerson === 1 ? person1.name : person2.name;
         const whoEmoji = currentPerson === 1 ? '💕' : '💗';
         const qKey = currentPerson === 1 ? 'question.myAnswer' : 'question.partnerAnswer';
-        const qText = i18n.t(qKey).replace('{name}', `${whoEmoji} ${who}님`);
+        const qText = i18n.t(qKey).replace('{name}', `${whoEmoji} ${who}`);
 
         document.getElementById('q-who').textContent = qText;
         document.getElementById('q-text').textContent = q.text;
@@ -516,12 +542,14 @@ if (document.readyState === 'loading') {
         window._result = result;
         window._level = level;
 
-        // GA event
+        // GA event (no raw PII or numeric compatibility score leaks)
         if (typeof gtag === 'function') {
+            const band = result.total >= 80 ? 'high' : (result.total >= 60 ? 'mid' : 'low');
             gtag('event', 'test_complete', {
-                event_category: 'valentine',
-                event_label: level.title,
-                value: result.total
+                app_name: 'valentine',
+                result_type: `${result.type1}_${result.type2}`,
+                score_band: band,
+                lang: getActiveLang()
             });
         }
     }
@@ -636,20 +664,33 @@ if (document.readyState === 'loading') {
     function shareResult() {
         const result = window._result;
         const level = window._level;
+        const lang = getActiveLang();
         const shareText = i18n.t('share.text')
             .replace('{p1Name}', person1.name)
             .replace('{p2Name}', person2.name)
             .replace('{score}', result.total)
             .replace('{emoji}', level.emoji)
             .replace('{title}', level.title);
-        const url = 'https://dopabrain.com/valentine/';
+        const url = `https://dopabrain.com/valentine/?lang=${encodeURIComponent(lang)}&utm_source=share`;
+
+        if (typeof gtag === 'function') {
+            gtag('event', 'share', {
+                method: navigator.share ? 'native_share' : 'copy_link',
+                app_name: 'valentine',
+                lang
+            });
+        }
 
         if (navigator.share) {
             navigator.share({ title: i18n.t('app.title'), text: shareText, url }).catch(() => {});
-        } else {
+        } else if (navigator.clipboard && navigator.clipboard.writeText) {
             navigator.clipboard.writeText(shareText + ' ' + url).then(() => {
                 showToast(i18n.t('share.clipboardSuccess'));
+            }).catch(() => {
+                showToast(i18n.t('share.clipboardSuccess'));
             });
+        } else {
+            showToast(i18n.t('share.clipboardSuccess'));
         }
     }
 
@@ -658,84 +699,148 @@ if (document.readyState === 'loading') {
         const ctx = canvas.getContext('2d');
         const result = window._result;
         const level = window._level;
+        const lang = getActiveLang();
 
         canvas.width = 1080;
-        canvas.height = 1080;
+        canvas.height = 1920;
 
-        // Background gradient
-        const grad = ctx.createLinearGradient(0, 0, 1080, 1080);
+        // Vertical Story Background Gradient
+        const grad = ctx.createLinearGradient(0, 0, 1080, 1920);
         grad.addColorStop(0, '#1a0011');
-        grad.addColorStop(0.5, '#2d0024');
+        grad.addColorStop(0.48, '#2d0024');
         grad.addColorStop(1, '#0d001a');
         ctx.fillStyle = grad;
-        ctx.fillRect(0, 0, 1080, 1080);
+        ctx.fillRect(0, 0, 1080, 1920);
+
+        // Ambient glow
+        const rad = ctx.createRadialGradient(540, 740, 40, 540, 740, 520);
+        rad.addColorStop(0, 'rgba(255, 75, 145, 0.25)');
+        rad.addColorStop(1, 'rgba(255, 75, 145, 0)');
+        ctx.fillStyle = rad;
+        ctx.fillRect(0, 0, 1080, 1920);
 
         // Decorative hearts
-        ctx.font = '80px serif';
-        ctx.globalAlpha = 0.1;
-        for (let i = 0; i < 12; i++) {
-            ctx.fillText('💕', Math.random() * 1000, Math.random() * 1000);
+        ctx.font = '84px serif';
+        ctx.globalAlpha = 0.09;
+        for (let i = 0; i < 16; i++) {
+            ctx.fillText('💕', ((i * 211) % 940) + 60, ((i * 283) % 1760) + 80);
         }
         ctx.globalAlpha = 1;
 
-        // Title
-        ctx.font = 'bold 48px "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif';
-        ctx.fillStyle = '#fff';
+        const fontFamily = '"Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif';
+
+        // Header badge & title
         ctx.textAlign = 'center';
-        ctx.fillText(i18n.t('image.title'), 540, 100);
+        ctx.font = `bold 32px ${fontFamily}`;
+        ctx.fillStyle = 'rgba(255, 143, 189, 0.9)';
+        ctx.fillText('DOPABRAIN RELATIONSHIP QUIZ', 540, 160);
 
-        // Names
-        ctx.font = 'bold 56px "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif';
-        ctx.fillStyle = '#ff6b9d';
-        ctx.fillText(`${person1.name}  ❤️  ${person2.name}`, 540, 220);
+        ctx.font = `bold 56px ${fontFamily}`;
+        ctx.fillStyle = '#ffffff';
+        ctx.fillText(i18n.t('image.title'), 540, 245);
 
-        // Score circle
+        // Couple names pill
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.08)';
+        ctx.strokeStyle = 'rgba(255, 107, 157, 0.45)';
+        ctx.lineWidth = 3;
         ctx.beginPath();
-        ctx.arc(540, 440, 160, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(255, 75, 145, 0.15)';
+        if (ctx.roundRect) {
+            ctx.roundRect(140, 320, 800, 118, 59);
+        } else {
+            ctx.rect(140, 320, 800, 118);
+        }
         ctx.fill();
-        ctx.strokeStyle = level.color;
-        ctx.lineWidth = 8;
         ctx.stroke();
 
-        // Score arc
+        ctx.font = `bold 52px ${fontFamily}`;
+        ctx.fillStyle = '#ff8fbd';
+        ctx.fillText(`${person1.name}  ❤️  ${person2.name}`, 540, 396);
+
+        // Score circle (centered cleanly on 1080x1920 canvas)
         ctx.beginPath();
-        ctx.arc(540, 440, 160, -Math.PI / 2, -Math.PI / 2 + (Math.PI * 2 * result.total / 100));
-        ctx.strokeStyle = level.color;
-        ctx.lineWidth = 12;
+        ctx.arc(540, 720, 210, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(255, 75, 145, 0.14)';
+        ctx.fill();
+        ctx.strokeStyle = 'rgba(255, 255, 255, 0.15)';
+        ctx.lineWidth = 14;
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.arc(540, 720, 210, -Math.PI / 2, -Math.PI / 2 + (Math.PI * 2 * result.total / 100));
+        ctx.strokeStyle = level.color || '#ff4b91';
+        ctx.lineWidth = 18;
         ctx.lineCap = 'round';
         ctx.stroke();
 
-        ctx.font = 'bold 100px "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif';
-        ctx.fillStyle = '#fff';
-        ctx.fillText(result.total + '%', 540, 470);
+        ctx.font = `bold 124px ${fontFamily}`;
+        ctx.fillStyle = '#ffffff';
+        ctx.fillText(result.total + '%', 540, 756);
 
         // Result emoji & title
-        ctx.font = '72px serif';
-        ctx.fillText(level.emoji, 540, 680);
+        ctx.font = '96px serif';
+        ctx.fillText(level.emoji, 540, 1060);
 
-        ctx.font = 'bold 44px "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif';
-        ctx.fillStyle = level.color;
-        ctx.fillText(level.title, 540, 750);
+        ctx.font = `bold 54px ${fontFamily}`;
+        ctx.fillStyle = level.color || '#ff8fbd';
+        ctx.fillText(level.title, 540, 1150);
 
-        // Love style
-        ctx.font = '28px "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif';
-        ctx.fillStyle = 'rgba(255,255,255,0.7)';
-        ctx.fillText(level.loveStyle, 540, 820);
+        // Love style subtitle
+        ctx.font = `32px ${fontFamily}`;
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.82)';
+        ctx.fillText(level.loveStyle, 540, 1225);
 
-        // Detail scores
-        ctx.font = '26px "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif';
-        ctx.fillStyle = 'rgba(255,255,255,0.5)';
-        const detailText = `${i18n.t('image.nameScoreLabel')} ${result.nameScore}%  |  ${i18n.t('image.zodiacScoreLabel')} ${result.zodiacScore}%  |  ${i18n.t('image.quizScoreLabel')} ${result.quizScore}%`;
-        ctx.fillText(detailText, 540, 900);
+        // Detail breakdown card
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.06)';
+        ctx.strokeStyle = 'rgba(255, 255, 255, 0.14)';
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        if (ctx.roundRect) {
+            ctx.roundRect(120, 1320, 840, 310, 28);
+        } else {
+            ctx.rect(120, 1320, 840, 310);
+        }
+        ctx.fill();
+        ctx.stroke();
 
-        // Footer
-        ctx.font = '24px "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif';
-        ctx.fillStyle = 'rgba(255,255,255,0.3)';
-        ctx.fillText(i18n.t('image.footer'), 540, 1020);
+        const breakdownRows = [
+            { label: i18n.t('image.nameScoreLabel'), val: result.nameScore },
+            { label: i18n.t('image.zodiacScoreLabel'), val: result.zodiacScore },
+            { label: i18n.t('image.quizScoreLabel'), val: result.quizScore }
+        ];
+        breakdownRows.forEach((row, idx) => {
+            const y = 1395 + idx * 88;
+            ctx.textAlign = 'left';
+            ctx.font = `bold 32px ${fontFamily}`;
+            ctx.fillStyle = '#ffffff';
+            ctx.fillText(row.label, 170, y);
+
+            ctx.textAlign = 'right';
+            ctx.fillStyle = '#ff8fbd';
+            ctx.fillText(row.val + '%', 910, y);
+
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.14)';
+            ctx.fillRect(170, y + 18, 740, 14);
+            ctx.fillStyle = '#ff4b91';
+            ctx.fillRect(170, y + 18, Math.round(740 * Math.max(0, Math.min(100, row.val)) / 100), 14);
+        });
+
+        // Footer CTA
+        ctx.textAlign = 'center';
+        ctx.font = `bold 30px ${fontFamily}`;
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.72)';
+        ctx.fillText(`${i18n.t('image.footer')}?lang=${lang}`, 540, 1790);
+
+        if (typeof gtag === 'function') {
+            gtag('event', 'save_image', {
+                app_name: 'valentine',
+                result_type: `${result.type1}_${result.type2}`,
+                lang
+            });
+        }
 
         // Download
         canvas.toBlob(blob => {
+            if (!blob) return;
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;

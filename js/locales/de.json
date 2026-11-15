@@ -1,7 +1,8 @@
 {
   "app": {
     "title": "Valentine Kompatibilität Test - Wie hoch ist unsere Kompatibilität %? 💕",
-    "description": "Finde deine Kompatibilität mit Name + Geburtstag + 5 Fragen! Analysiere Namenskompatibilität, Sternzeichen und Liebestypen. Speichere und teile Ergebnisse."
+    "description": "Finde deine Kompatibilität mit Name + Geburtstag + 5 Fragen! Analysiere Namenskompatibilität, Sternzeichen und Liebestypen. Speichere und teile Ergebnisse.",
+    "loading": "Wird geladen..."
   },
   "intro": {
     "title": "Valentine\nKompatibilität Test",
@@ -40,7 +41,7 @@
   },
   "result": {
     "compatibilityScore": "Kompatibilität",
-    "deepAnalysis": "Tiefe KI-Kompatibilitätsanalyse anzeigen",
+    "deepAnalysis": "Tiefe Kompatibilitätsanalyse ansehen",
     "shareButton": "📤 Ergebnis teilen",
     "saveImageButton": "📷 Bild speichern",
     "retryButton": "🔄 Nochmal versuchen",
@@ -125,10 +126,11 @@
   },
   "related": {
     "title": "Mehr entdecken",
-    "nameMatch": "Namenskompatibilität",
+    "nameMatch": "Namenstest",
     "loveFrequency": "Liebesfrequenz",
     "zodiacMatch": "Sternzeichen-Match",
-    "loveLanguage": "Liebessprache"
+    "loveLanguage": "Liebessprache",
+    "mbtiLove": "MBTI Liebe"
   },
   "faq": {
     "title": "Häufig gestellte Fragen (FAQ)",
@@ -140,5 +142,22 @@
     "a3": "Sternbergs Dreieckstheorie der Liebe (Intimität, Leidenschaft, Verbindlichkeit) sowie die '5 Sprachen der Liebe' bieten verlässliche Orientierung für ein achtsames Miteinander.",
     "q4": "Werden eingegebene Namen oder Geburtstage gespeichert?",
     "a4": "Nein. Sämtliche Berechnungen laufen ausschließlich lokal in Ihrem Browser ab. Keine persönlichen Angaben verlassen Ihr Gerät."
+  },
+  "accessibility": {
+    "skipMain": "Zum Hauptinhalt springen"
+  },
+  "game": {
+    "back": "DopaBrain Startseite"
+  },
+  "curated": {
+    "badge": "BUCHTIPPS",
+    "title": "Empfohlene Bücher zu Paarpsychologie & Bindung",
+    "subtitle": "Forschungsbasierte Lektüre für Vertrauen, Nähe und gesunde Kommunikation",
+    "book1Title": "Die 7 Geheimnisse der glücklichen Ehe",
+    "book1Author": "John Gottman & Nan Silver",
+    "book1Desc": "Erprobte Gewohnheiten für mehr Verständnis und konstruktive Konfliktlösung.",
+    "book2Title": "Warum wir lieben (Attached)",
+    "book2Author": "Amir Levine & Rachel Heller",
+    "book2Desc": "Praxisnaher Leitfaden zu Bindungstypen und stabilen Beziehungen."
   }
 }

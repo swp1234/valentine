@@ -1,7 +1,8 @@
 {
   "app": {
     "title": "情人节配对测试 - 我们的配对度是多少？💕",
-    "description": "通过姓名 + 生日 + 5个问题了解你的配对度！分析姓名配对、星座配对和爱情类型。保存和分享结果。"
+    "description": "通过姓名 + 生日 + 5个问题了解你的配对度！分析姓名配对、星座配对和爱情类型。保存和分享结果。",
+    "loading": "加载中..."
   },
   "intro": {
     "title": "情人节\n配对测试",
@@ -40,7 +41,7 @@
   },
   "result": {
     "compatibilityScore": "配对度",
-    "deepAnalysis": "查看AI深度配对分析",
+    "deepAnalysis": "查看深度配对分析",
     "shareButton": "📤 分享结果",
     "saveImageButton": "📷 保存图片",
     "retryButton": "🔄 重新测试",
@@ -126,9 +127,10 @@
   "related": {
     "title": "探索更多",
     "nameMatch": "姓名配对",
-    "loveFrequency": "爱情频率",
+    "loveFrequency": "恋爱频率",
     "zodiacMatch": "星座配对",
-    "loveLanguage": "爱的语言"
+    "loveLanguage": "爱的语言",
+    "mbtiLove": "MBTI恋爱"
   },
   "faq": {
     "title": "常见问题解答 (FAQ)",
@@ -140,5 +142,22 @@
     "a3": "斯滕伯格的“爱情三角理论”（亲密、激情、承诺）和盖瑞·查普曼的“五种爱的语言”为情侣理解彼此的情感需求提供了扎实的科学视角。",
     "q4": "输入的姓名、生日与答题数据会被服务器记录吗？",
     "a4": "绝不会。所有匹配计算和页面生成均严格在您的本地浏览器端即时运行，不会向任何远程服务器传输个人隐私数据。"
+  },
+  "accessibility": {
+    "skipMain": "跳转到主要内容"
+  },
+  "game": {
+    "back": "DopaBrain 首页"
+  },
+  "curated": {
+    "badge": "精选好书",
+    "title": "伴侣心理与依恋关系推荐书单",
+    "subtitle": "帮助理解沟通习惯、情感需求与长期亲密关系的经典著作",
+    "book1Title": "幸福的婚姻（The Seven Principles）",
+    "book1Author": "约翰·戈特曼",
+    "book1Desc": "基于数十年伴侣研究的沟通、信任与冲突修复指南。",
+    "book2Title": "依恋（Attached）",
+    "book2Author": "阿米尔·莱文 / 蕾切尔·赫勒",
+    "book2Desc": "通过成人依恋理论理解你与伴侣的情感联结模式。"
   }
 }
