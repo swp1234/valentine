@@ -159,5 +159,11 @@
     "book2Title": "Apegados (Attached)",
     "book2Author": "Amir Levine e Rachel Heller",
     "book2Desc": "Guia para entender estilos de apego e criar vínculos mais seguros."
+  },
+  "nextStep": {
+    "label": "Próximo passo recomendado",
+    "title": "Teste de Estilo de Apego",
+    "desc": "Vá além da química do momento e mapeie seu estilo de apego em 10 cenários.",
+    "cta": "Fazer Teste de Apego →"
   }
 }

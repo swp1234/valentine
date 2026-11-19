@@ -159,5 +159,11 @@
     "book2Title": "Bağlanma (Attached)",
     "book2Author": "Amir Levine & Rachel Heller",
     "book2Desc": "Yetişkin bağlanma stillerini anlayarak uyumu geliştirme rehberi."
+  },
+  "nextStep": {
+    "label": "Önerilen Sonraki Adım",
+    "title": "Bağlanma Stili Testi",
+    "desc": "İlişki kimyanın ötesine geç ve 10 senaryoda bağlanma stilini keşfet.",
+    "cta": "Bağlanma Testini Başlat →"
   }
 }

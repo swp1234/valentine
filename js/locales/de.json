@@ -159,5 +159,11 @@
     "book2Title": "Warum wir lieben (Attached)",
     "book2Author": "Amir Levine & Rachel Heller",
     "book2Desc": "Praxisnaher Leitfaden zu Bindungstypen und stabilen Beziehungen."
+  },
+  "nextStep": {
+    "label": "Empfohlener nächster Schritt",
+    "title": "Bindungsstil-Reflexion",
+    "desc": "Entdecke dein echtes Bindungsmuster in Beziehungen anhand von 10 Alltagsszenarien.",
+    "cta": "Bindungstest starten →"
   }
 }

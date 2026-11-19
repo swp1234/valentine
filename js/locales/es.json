@@ -159,5 +159,11 @@
     "book2Title": "Maneras de amar (Attached)",
     "book2Author": "Amir Levine y Rachel Heller",
     "book2Desc": "Guía práctica para comprender el apego ansioso, evitativo y seguro."
+  },
+  "nextStep": {
+    "label": "Siguiente paso recomendado",
+    "title": "Test de Estilo de Apego",
+    "desc": "Profundiza en tu química emocional y descubre tu patrón de apego en 10 escenarios.",
+    "cta": "Hacer Test de Apego →"
   }
 }

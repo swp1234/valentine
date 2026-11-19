@@ -159,5 +159,11 @@
     "book2Title": "Attached: The New Science of Adult Attachment",
     "book2Author": "Amir Levine & Rachel Heller",
     "book2Desc": "Practical guide to understanding anxious, avoidant, and secure partner dynamics."
+  },
+  "nextStep": {
+    "label": "Recommended Next Step",
+    "title": "Attachment Style Reflection",
+    "desc": "Go deeper into relationship chemistry—map your attachment pattern across 10 real-life scenarios.",
+    "cta": "Check Attachment Style →"
   }
 }

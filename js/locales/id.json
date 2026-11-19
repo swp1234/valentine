@@ -159,5 +159,11 @@
     "book2Title": "Attached: The New Science of Adult Attachment",
     "book2Author": "Amir Levine & Rachel Heller",
     "book2Desc": "Panduan praktis memahami pola kelekatan diri dan pasangan."
+  },
+  "nextStep": {
+    "label": "Langkah Berikutnya",
+    "title": "Tes Gaya Keterikatan",
+    "desc": "Kenali pola hubungan dan gaya keterikatanmu secara lebih dalam lewat 10 skenario.",
+    "cta": "Cek Gaya Keterikatan →"
   }
 }
